@@ -1,0 +1,479 @@
+@media (max-width: 768px) {
+
+.sobre-content {
+    display: block;
+}
+
+  #menu-icon {
+    display: block;
+    font-size: 2rem;
+}
+
+.header {
+    padding: 15px;
+}
+
+.header .logo {
+    font-size: 30px;
+}
+
+.navbar {
+    background-color: #097BCB;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: none;
+}
+
+.navbar.active {
+    display: block;
+}
+
+.navbar a {
+    border-bottom: 1px solid #097BCB;
+    margin-left: 20px;
+    padding: 5px;
+    display: block;
+    font-size: 20px;
+}
+.hora {
+  display: none;
+}
+
+.tech-rotate i {
+    font-size: 3rem;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-content h1 {
+    line-height: 4.5rem;
+}
+
+section {
+    padding: 10rem 7% 2rem;
+}
+
+.home .foto-perfil {
+    padding-top: 4rem;
+    width: 100%;
+}
+
+.home .foto-perfil img {
+    width: 90%;
+    position: relative;
+    right: -10px;
+    top: -0px;
+    text-align: center;
+    
+}
+
+.btn {
+    width: 100%;
+}  
+
+.about {
+  flex-direction: column-reverse;
+
+}
+
+.about-content h2 {
+  text-align: center;
+}
+
+.apps__button {
+    display: block;
+}
+
+
+.hora-botao a {
+    width: 70%;
+}
+
+.vindas {
+    text-align: center;
+}
+
+
+.casa {
+    box-shadow: 1px 1px 40px #0c97fa63;
+}
+
+.casa-segunda {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.casa-primeira {
+    display: none;
+}
+
+.casa-segunda .foto-perfil {
+    /*background-image: url(../img/wadi-wilson.jpg);*/
+    background-size: cover;
+
+    width: 50%;
+}
+
+
+.casa-segunda h2 {
+    display: block;
+    text-align: center;
+    font-weight: 100;
+}
+
+.casa {
+    height: 125vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.casa p.primeiro {   
+    font-size: 35px;
+    width: 365px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+
+.casa span {
+    width: 100%;
+    font-size: 35px;
+}
+.casa span .animate {
+    font-size: 35px;
+}
+
+.casa-segunda p.segundo {
+    text-align: center;
+    width: 88%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 17px;
+}
+
+
+.sobre {
+    padding-top: 1rem;
+}
+
+.sobre h2 {
+    width: 65%;
+    font-size: 2rem;
+    margin-left: 7.5%;
+    
+}
+
+.sobre h2 i {
+    font-size: 3rem;
+}
+
+.trilha {
+    width: 90%;
+    
+}
+
+.trilha h3 {
+    display: flex;
+}
+
+.trilha-fundo-h2 .seta {
+    font-size: 4rem;
+}
+
+.logo-react {
+    position: relative;
+    pointer-events: none;
+    left: -3rem;
+    bottom: -4rem;
+    width: 40%;
+}
+
+#certificacoes h2 {
+    padding: 8rem 0 2.5rem 0;
+}
+
+#certificacoes .container-seta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#certificacoes .container-seta i {
+    display: block;
+    font-size: 4rem;
+}
+
+.container-certificado {
+    display: grid;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+
+}
+
+.certificado-caixas {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.cert-content {
+    width: 100%;
+    padding: 15px 15px 25px 15px;
+}
+
+.cert-img-full,
+.cert-img-react,
+.cert-img-ia,
+.cert-img-native,
+.cert-img-node,
+.cert-img-python,
+.cert-img-go,
+.cert-img-devops,
+.cert-img-iniciante,
+.cert-img-intermedio {
+    background-position: center center;
+    border-radius: 0px 0px 15px 15px;
+    margin: auto;
+    height: 30vh;
+    width: 100%;
+}
+
+#portofolio .postgre {
+    position: relative;
+    left: -4rem;
+    bottom: -5rem;
+    width: 10%;
+    font-size: 12rem;
+}
+
+.port-seta {
+    justify-content: space-around;
+}
+
+.port-seta .seta-port {
+    font-size: 4rem;
+    position: relative;
+    top: 2rem;
+}
+
+.container-portofolio {
+    display: grid;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+
+
+.portofolio-caixas {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.port-content {
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+}
+
+.port-img-planner,
+.port-img-sala,
+.port-img-stack,
+.port-img-geladaria,
+.port-img-metas,
+.port-img-geladariaDev,
+.port-img-gelado,
+.port-img-hamburguer,
+.port-img-streaming,
+.port-img-portfolio
+{
+    background-position: center center;
+    border-radius: 15px 15px 0px 0px;
+    background-position: top;
+    margin: auto;
+    height: 20vh;
+    width: 100%;
+    
+}
+
+.cert-img-go
+aside button  {
+    padding-bottom: 10px;
+    width: 50%;
+}
+
+.content-img {
+    width: 100%;
+}
+
+#suporte {
+    margin-left: 20px;
+}
+
+#serviços {
+    grid-template-columns: 92%;
+}    
+
+.serviços {
+    grid-template-columns: 87%;
+}
+
+.serviços {
+    margin: auto;
+    width: 96%;
+}
+
+.serviços a button {
+    margin: auto;
+    width: 90%;
+}
+
+nav p {
+    text-shadow: 1px 1px 20px #0c97fac9;
+    padding-right: 0px;
+}
+
+nav span {
+    display: none;
+}
+
+.react-cont {
+    width: 20%;
+    bottom: -8rem;
+}
+
+#contacto {
+    padding-bottom: 8rem;
+}
+
+.contacto {
+    padding-top: 0;
+}
+
+#contacto h2 {
+    position: relative;
+    bottom: -40px;
+    font-size: 2rem;
+}
+
+.contacto button {
+    margin: auto;
+    margin-top: 10px;
+    width: 98%;
+}
+
+
+form#contact-form {
+    background-color: #01111E;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+form input {
+    width: 350px;
+}
+
+.animacao {
+    width: 80%;
+    font-size: 28px;
+    padding-left: 30px;
+}
+
+
+footer {
+    width: 100%;
+    display: grid;
+    justify-content: left;
+    padding-left: 2rem;
+}
+
+footer .social {
+    padding-bottom: 1.5rem;
+}
+
+footer .social button {
+    padding: 12px;
+}
+
+
+footer .social h3 {
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+footer .content-number p {
+    font-size: 1.1rem;
+}
+
+footer .content-number h3 {
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+footer .pages menu {
+    font-size: 1.1rem;
+}
+
+
+footer .pages menu h3 {
+    padding-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+footer .pages {
+    padding-top: 0px;
+}   
+
+.final {
+    font-size: 1rem;
+}
+
+
+}
+
+/*
+@media only screen and (min-width: 992px) {
+}
+
+
+@media only screen and (min-width: 1200px) {}
+
+@media (max-width: 580px) {
+
+
+}
+
+@media (max-width: 450px) {
+    
+}
+
+@media (max-width: 365px) {
+
+}
+
+@media (max-width: 365px) {
+
+}
+
+@media (max-width: 315px) {
+
+}
+
+*/
