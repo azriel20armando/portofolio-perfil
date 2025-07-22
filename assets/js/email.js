@@ -1,25 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const inputs = document.querySelectorAll('#contact-form input');
 
     inputs.forEach(input => {
-        input.addEventListener('focus', function() {
+        input.addEventListener('focus', function () {
             if (!this.classList.contains('input-success')) {
-                this.classList.add('input-error'); // Sempre fica vermelho ao clicar
+                this.classList.add('input-error');
             }
         });
 
-        input.addEventListener('input', function() {
+        input.addEventListener('input', function () {
             validateField(this);
         });
 
-        input.addEventListener('blur', function() {
+        input.addEventListener('blur', function () {
             validateField(this);
         });
     });
 
     function validateField(input) {
         removeError(input);
-        
         let isValid = true;
 
         if (input.required && input.value.trim() === '') {
@@ -27,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
 
-        switch(input.id) {
+        switch (input.id) {
             case 'name':
             case 'empresa':
-            case 'empresaGPS': // Localização agora é obrigatória!
+            case 'empresaGPS':
                 if (input.value.trim().length < 8) {
                     showError(input, 'Deve ter pelo menos 8 caracteres');
                     isValid = false;
@@ -38,20 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
 
             case 'number':
-                // Remove qualquer caractere que não seja número
                 input.value = input.value.replace(/\D/g, '');
-            
-                // Limita a 9 caracteres numéricos
                 if (input.value.length > 9) {
                     input.value = input.value.slice(0, 9);
                 }
-            
-                // Validação do número com 9 dígitos exatos
                 if (!/^\d{9}$/.test(input.value)) {
                     showError(input, 'O telefone deve ter exatamente 9 dígitos numéricos');
                     isValid = false;
                 }
-            break;
+                break;
 
             case 'email':
                 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
@@ -69,26 +63,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (isValid) {
-            input.classList.add('input-success'); // Mantém verde se válido
-            input.classList.remove('input-error'); // Remove borda vermelha
+            input.classList.add('input-success');
+            input.classList.remove('input-error');
         } else {
-            input.classList.add('input-error'); // Mantém borda vermelha se inválido
+            input.classList.add('input-error');
             input.classList.remove('input-success');
         }
 
         return isValid;
     }
-    
+
     function showError(input, message) {
         const errorElement = input.nextElementSibling;
         if (errorElement && errorElement.classList.contains('error-message')) {
             errorElement.textContent = message;
             errorElement.classList.add('active');
             input.classList.add('input-error');
-            input.classList.remove('input-success'); // Remove borda verde ao erro
+            input.classList.remove('input-success');
         }
     }
-    
+
     function removeError(input) {
         const errorElement = input.nextElementSibling;
         if (errorElement && errorElement.classList.contains('error-message')) {
@@ -97,11 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
         e.preventDefault();
-        
         let formIsValid = true;
-        
+
         inputs.forEach(input => {
             if (!validateField(input)) {
                 formIsValid = false;
@@ -112,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = document.querySelector('button[type="submit"]');
             submitBtn.disabled = true;
             startLoadingAnimation(submitBtn);
-            
+
             const templateParams = {
                 subject: `Novo contato de ${document.getElementById('name').value}`,
                 name: document.getElementById('name').value,
@@ -123,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 service: document.getElementById('campoFormulario').value,
                 submission_date: new Date().toLocaleString()
             };
-            
+
             let timeout = setTimeout(() => {
                 stopLoadingAnimation(submitBtn);
                 showFailureModal();
@@ -131,13 +124,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
 
             emailjs.send('service_ypnwarg', 'template_xt23rn8', templateParams)
-                .then(function(response) {
+                .then(function (response) {
                     clearTimeout(timeout);
                     stopLoadingAnimation(submitBtn);
                     showSuccessModal();
                     document.getElementById('contact-form').reset();
                     resetFieldStyles();
-                }, function(error) {
+                }, function (error) {
                     clearTimeout(timeout);
                     stopLoadingAnimation(submitBtn);
                     showFailureModal();
@@ -163,32 +156,71 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showSuccessModal() {
-        showModal('Enviado com sucesso', 'OK', 'success');
+        showToast('success', 'Mensagem enviada com sucesso', true);
     }
-    
+
     function showFailureModal() {
-        showModal('Falha ao enviar', 'Fechar', 'error');
+        showToast('error', 'Falha ao enviar', false);
     }
-    
-    function showModal(message, buttonText, type) {
-        const modal = document.createElement('div');
-        modal.className = `success-modal ${type}`;
-        modal.innerHTML = `
-            <div class="modal-content">
-                <h3>
-                    ${message}
-                    ${type === 'success' 
-                        ? "<i class='bx bx-mail-send bx-tada'></i>" 
-                        : "<i class='bx bx-mail-send bx-tada'></i>"}
-                </h3>
-                <button class="close-modal">${buttonText}</button>
+
+    function showToast(type = 'success', message = '', showLink = false) {
+        const containerId = 'toast-container';
+        let container = document.getElementById(containerId);
+
+        if (!container) {
+            container = document.createElement('div');
+            container.id = containerId;
+            container.style.position = 'fixed';
+            container.style.bottom = '20px';
+            container.style.right = '20px';
+            container.style.zIndex = '9999';
+            document.body.appendChild(container);
+        }
+
+        const toast = document.createElement('div');
+        toast.className = 'toast ' + (type === 'error' ? 'error' : '');
+        toast.style.cssText = `
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: ${type === 'error' ? '#c62828' : '#1e8e3e'};
+            color: #fff;
+            padding: 12px 16px;
+            margin-top: 10px;
+            border-radius: 4px;
+            min-width: 320px;
+            max-width: 400px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+            animation: slideIn 0.4s ease, fadeOut 0.4s ease 4.6s;
+        `;
+
+        toast.innerHTML = `
+            <div class="toast-content" style="display: flex; align-items: center; flex-grow: 1;">
+                <i style="margin-right: 8px; font-size: 18px;">${type === 'error' ? '❌' : '✅'}</i>
+                <span>${message}</span>
+            </div>
+            <div class="toast-actions" style="margin-left: 16px; display: flex; align-items: center; gap: 10px;">
+                <span class="close-btn" style="cursor: pointer; font-size: 18px;">&times;</span>
             </div>
         `;
-        document.body.appendChild(modal);
-        
-        modal.querySelector('.close-modal').addEventListener('click', function() {
-            document.body.removeChild(modal);
+
+        container.appendChild(toast);
+
+        const autoRemove = setTimeout(() => {
+            toast.remove();
+        }, 5000000000);
+
+        toast.querySelector('.close-btn').addEventListener('click', () => {
+            clearTimeout(autoRemove);
+            toast.remove();
         });
+
+        if (showLink) {
+            toast.querySelector('.toast-link').addEventListener('click', () => {
+                alert('Abrindo biblioteca...'); // Aqui você pode navegar para onde quiser
+            });
+        }
     }
     
     function resetFieldStyles() {
@@ -197,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
   
   

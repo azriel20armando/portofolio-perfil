@@ -10,7 +10,9 @@
         <link rel="stylesheet" href="assets/sass/geral.scss">
         <link rel="stylesheet" href="assets/css/breakpoints.css">
         <link rel="stylesheet" href="assets/css/scroller.css">
+        <link rel="stylesheet" href="assets/css/modal-envio.css">
         <link rel="stylesheet" href="assets/css/form.css">
+        <link rel="stylesheet" href="assets/css/modal-service.css">
         <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
         <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -1205,7 +1207,7 @@
                     </div> 
 
                     <label for="servico">Pacote Contrato:</label>
-                    <input type="text" name="servico" id="campoFormulario" placeholder="Selecionar (Pacote)" readonly>
+                    <input class="input-pacote" type="text" name="servico" id="campoFormulario" placeholder="Selecionar (Pacote)" readonly>
                     <div class="error-message">
                         
                     </div> 
@@ -1214,6 +1216,21 @@
                 <button class="btn" type="submit">Enviar</button>
             </form>
         </div>
+        <div id="modalServicos" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" id="fecharModal"></span>
+            <ul id="listaServicos">
+            <h1>Selecionar pacote</h1>
+            <li><p>Design UI/UX</p>  <span>1</span></li>
+            <li><p>Frontend Developer</p> <span>2</span></li>
+            <li><p>Backend Developer</p>  <span>3</span></li>
+            <li><p>DevOps Cloud</p> <span>4</span></li>
+            <li><p>Desktop Developer</p>  <span>5</span></li>
+            <li><p>Mobile Developer</p> <span>6</span></li>
+            </ul>
+        </div>
+        </div>
+
         <footer>
             <div class="content-number">   
                 <h3>Contactos</h3>
@@ -1248,14 +1265,20 @@
                 <a href="https://wa.me/244932101903" rel="external" target="_blank"><button style="margin-bottom: 25px;">WhatsApp</button></a><br>
             </div>
         </footer>
-       
-
         <div class="final">
             © Copyright2024. Todos os Direitos Reservados por Azriel Armando
         </div>
+        <div id="toast-container">
+
+        </div>
+        <div id="loader-overlay">
+
+        </div>
+
     </body>
     <!--Final Corpo do Site-->
     <script src="assets/js/email.js"></script>
     <script src="assets/js/scrip.js"></script>
     <script src="assets/js/scroller.js"></script>
+    <script src="assets/js/modal-service.js"></script>
 </html>
