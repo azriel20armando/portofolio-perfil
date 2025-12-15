@@ -48,6 +48,26 @@ window.onscroll = () => {
   };
 });
 
+/*========== Scroll Animations ==========*/
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+    }
+  });
+}, observerOptions);
+
+// Observe all animated elements
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedElements = document.querySelectorAll('.trilha, .container-certificado, .container-portofolio, .serviços, .skill-category');
+  animatedElements.forEach(el => observer.observe(el));
+});
+
 /*========== sticky navbar ==========*/
 const header = document.querySelector('.header');
 
