@@ -177,6 +177,7 @@ section {
 
 .trilha {
     width: 90%;
+    grid-template-columns: 100%;
     
 }
 
