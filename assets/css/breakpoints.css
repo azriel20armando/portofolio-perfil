@@ -243,7 +243,11 @@ section {
 .cert-img-go,
 .cert-img-devops,
 .cert-img-iniciante,
-.cert-img-intermedio {
+.cert-img-intermedio,
+.port-img-pizzaria,
+.port-img-betrust,
+.port-img-nvcode,
+.port-img-portalnoticias {
     background-position: center center;
     border-radius: 15px 15px 15px 15px;
     margin: auto;

@@ -894,6 +894,24 @@ aside a:hover {
     opacity: 80%;
 }
 
+.port-img-pizzaria {
+    opacity: 90%;
+    background-position: center;
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    background-image: url(../img/pizzaria.png);
+    background-size: cover;
+}
+
+.port-img-betrust {
+    opacity: 90%;
+    background-position: top;
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    background-image: url(../img/betrust.png);
+    background-size: cover;
+}
+
 .port-img-portalnoticias {
     opacity: 90%;
     background-position: center;
