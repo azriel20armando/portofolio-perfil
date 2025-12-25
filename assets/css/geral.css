@@ -389,11 +389,15 @@ section {
 }
 
 .dados-empresa  {
-    padding-bottom: 2rem;
+    background-color: #08131D;
+    border-radius: 15px;
+    padding: 0 15px 2rem 15px;
 }
 
 .dados-pessoais {
-    padding-bottom: 2rem;
+    padding: 0 15px 2rem 15px;
+    background-color: #0E1722;
+    border-radius: 15px;
 }
 
 .sobre-content {
@@ -491,7 +495,8 @@ section {
     justify-content: space-between;
     align-items: center;
     color: #60A5FA;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    
     font-weight: semi-bold;
     margin-bottom: 0.5rem;
 }
@@ -518,7 +523,7 @@ section {
 
 .trilha p {
     line-height: 30px;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 0px;
     background-color: #11181d7c;
     padding: 20px 20px 20px 20px;
     color: var(--cor04);
@@ -532,7 +537,7 @@ section {
 
 .trilha button {
     background-color: #0E1820;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 15px 0px 0px 15px;
     border: none;
     display: flex;
     align-items: center;
@@ -1337,10 +1342,17 @@ aside .data {
 }
 
 
-
 form#contact-form {
+    /*background-color: rgba(30, 58, 138, 0.05)*/
     display: grid;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    
+    padding: 10px 10px 2rem 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #10182E;
+    transition: all 0.3s ease;
 
 }
 
