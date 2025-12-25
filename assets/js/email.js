@@ -92,52 +92,52 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.getElementById('contact-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        let formIsValid = true;
+    e.preventDefault();
+    let formIsValid = true;
 
-        inputs.forEach(input => {
-            if (!validateField(input)) {
-                formIsValid = false;
-            }
-        });
+    inputs.forEach(input => {
+        if (!validateField(input)) {
+            formIsValid = false;
+        }
+    });
 
-        if (formIsValid) {
-            const submitBtn = document.querySelector('button[type="submit"]');
-            submitBtn.disabled = true;
-            startLoadingAnimation(submitBtn);
+    if (formIsValid) {
+        const submitBtn = document.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        startLoadingAnimation(submitBtn);
 
-            const templateParams = {
-                subject: `Novo contato de ${document.getElementById('name').value}`,
-                name: document.getElementById('name').value,
-                phone: document.getElementById('number').value,
-                email: document.getElementById('email').value,
-                company: document.getElementById('empresa').value,
-                location: document.getElementById('empresaGPS').value,
-                service: document.getElementById('campoFormulario').value,
-                submission_date: new Date().toLocaleString()
-            };
+        const templateParams = {
+            subject: `Novo contato de ${document.getElementById('name').value}`,
+            name: document.getElementById('name').value,
+            phone: document.getElementById('number').value,
+            email: document.getElementById('email').value,
+            company: document.getElementById('empresa').value,
+            location: document.getElementById('empresaGPS').value,
+            service: document.getElementById('campoFormulario').value,
+            submission_date: new Date().toLocaleString()
+        };
 
-            let timeout = setTimeout(() => {
+        let timeout = setTimeout(() => {
+            stopLoadingAnimation(submitBtn);
+            showFailureModal();
+            submitBtn.disabled = false;
+        }, 5000);
+
+        emailjs.send('service_ypnwarg', 'template_xt23rn8', templateParams)
+            .then(function (response) {
+                clearTimeout(timeout);
+                stopLoadingAnimation(submitBtn);
+                showSuccessModal();
+                document.getElementById('contact-form').reset();
+                resetFieldStyles();
+            }, function (error) {
+                clearTimeout(timeout);
                 stopLoadingAnimation(submitBtn);
                 showFailureModal();
+            })
+            .finally(() => {
                 submitBtn.disabled = false;
-            }, 5000);
-
-            emailjs.send('service_ypnwarg', 'template_xt23rn8', templateParams)
-                .then(function (response) {
-                    clearTimeout(timeout);
-                    stopLoadingAnimation(submitBtn);
-                    showSuccessModal();
-                    document.getElementById('contact-form').reset();
-                    resetFieldStyles();
-                }, function (error) {
-                    clearTimeout(timeout);
-                    stopLoadingAnimation(submitBtn);
-                    showFailureModal();
-                })
-                .finally(() => {
-                    submitBtn.disabled = false;
-                });
+            });
         }
     });
 
