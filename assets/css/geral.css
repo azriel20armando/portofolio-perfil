@@ -887,6 +887,33 @@ aside a:hover {
     opacity: 80%;
 }
 
+.port-img-kixikila {
+    opacity: 90%;
+    background-position: center;
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    background-image: url(../img/ecommerce.png);
+    background-size: cover;
+}
+
+.port-img-social-help {
+    opacity: 90%;
+    background-position: center;
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    background-image: url(../img/social-help.png);
+    background-size: cover;
+}
+
+.port-img-rede-social {
+    opacity: 90%;
+    background-position: left;
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    background-image: url(../img/rede-social.png);
+    background-size: cover;
+}
+
 .port-img-pizzaria {
     opacity: 90%;
     background-position: center;
@@ -895,6 +922,16 @@ aside a:hover {
     background-image: url(../img/pizzaria.png);
     background-size: cover;
 }
+
+.port-img-faturapro {
+    opacity: 90%;
+    background-position: center;
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    background-image: url(../img/fatura.png);
+    background-size: cover;
+}
+
 
 .port-img-betrust {
     opacity: 90%;
