@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (formIsValid) {
-        const submitBtn = document.querySelector('button[type="submit"]');
+        const submitBtn = document.querySelector('#contact-form button[type="submit"]');
         submitBtn.disabled = true;
         startLoadingAnimation(submitBtn);
 
@@ -156,78 +156,71 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showSuccessModal() {
-        showToast('success', 'Mensagem enviada com sucesso', true);
+        showToast('success', 'Mensagem enviada com sucesso.');
     }
 
     function showFailureModal() {
-        showToast('error', 'Falha ao enviar', false);
+        showToast('error', 'Falha ao enviar. Tente novamente ou contacte-me pelo WhatsApp.');
     }
 
-    function showToast(type = 'success', message = '', showLink = false) {
+    function showToast(type = 'success', message = '') {
         const containerId = 'toast-container';
         let container = document.getElementById(containerId);
 
         if (!container) {
             container = document.createElement('div');
             container.id = containerId;
-            container.style.position = 'fixed';
-            container.style.bottom = '20px';
-            container.style.right = '20px';
-            container.style.zIndex = '9999';
+            container.setAttribute('role', 'status');
+            container.setAttribute('aria-live', 'polite');
             document.body.appendChild(container);
         }
 
         const toast = document.createElement('div');
-        toast.className = 'toast ' + (type === 'error' ? 'error' : '');
-        toast.style.cssText = `
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: ${type === 'error' ? '#c62828' : '#1e8e3e'};
-            color: #fff;
-            padding: 12px 16px;
-            margin-top: 10px;
-            border-radius: 4px;
-            min-width: 320px;
-            max-width: 400px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            font-family: Arial, sans-serif;
-            animation: slideIn 0.4s ease, fadeOut 0.4s ease 4.6s;
-        `;
+        toast.className = 'toast' + (type === 'error' ? ' error' : '');
 
-        toast.innerHTML = `
-            <div class="toast-content" style="display: flex; align-items: center; flex-grow: 1;">
-                <i style="margin-right: 8px; font-size: 18px;">${type === 'error' ? '❌' : '✅'}</i>
-                <span>${message}</span>
-            </div>
-            <div class="toast-actions" style="margin-left: 16px; display: flex; align-items: center; gap: 10px;">
-                <span class="close-btn" style="cursor: pointer; font-size: 18px;">&times;</span>
-            </div>
-        `;
+        const content = document.createElement('div');
+        content.className = 'toast__content';
+        const label = document.createElement('span');
+        label.className = 'toast__label';
+        label.textContent = type === 'error' ? 'Erro' : 'Enviado';
+        const text = document.createElement('span');
+        text.textContent = message;
+        content.append(label, text);
 
+        const closeBtn = document.createElement('button');
+        closeBtn.type = 'button';
+        closeBtn.className = 'close-btn';
+        closeBtn.setAttribute('aria-label', 'Fechar notificação');
+        closeBtn.innerHTML = '&times;';
+
+        toast.append(content, closeBtn);
         container.appendChild(toast);
 
-        const autoRemove = setTimeout(() => {
-            toast.remove();
-        }, 5000000000);
+        const removeToast = () => {
+            if (!toast.isConnected || toast.classList.contains('is-leaving')) return;
+            toast.classList.add('is-leaving');
+            setTimeout(() => toast.remove(), 350);
+        };
 
-        toast.querySelector('.close-btn').addEventListener('click', () => {
+        const autoRemove = setTimeout(removeToast, 6000);
+
+        closeBtn.addEventListener('click', () => {
             clearTimeout(autoRemove);
-            toast.remove();
+            removeToast();
         });
-
-        if (showLink) {
-            toast.querySelector('.toast-link').addEventListener('click', () => {
-                alert('Abrindo biblioteca...'); // Aqui você pode navegar para onde quiser
-            });
-        }
     }
-    
+
     function resetFieldStyles() {
         inputs.forEach(input => {
-            input.classList.remove('input-success', 'input-error');
+            input.classList.remove('input-success', 'input-error', 'campo-preenchido');
+            removeError(input);
         });
     }
+
+    // Limpar também os estados visuais ao carregar em "Limpar"
+    document.getElementById('contact-form').addEventListener('reset', function () {
+        resetFieldStyles();
+    });
 });
 
 

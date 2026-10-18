@@ -1,1429 +1,1045 @@
-<!--Iniciando Refatoração e Indentação do Código Fonte-->
 <!DOCTYPE html>
-<html lang="pt-pt">
-    <!--Cabeça do Site-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portofólio Pessoal</title>
-        <link rel="stylesheet" href="assets/css/geral.css">
-        <link rel="stylesheet" href="assets/sass/geral.scss">
-        <link rel="stylesheet" href="assets/css/breakpoints.css">
-        <link rel="stylesheet" href="assets/css/scroller.css">
-        <link rel="stylesheet" href="assets/css/modal-envio.css">
-        <link rel="stylesheet" href="assets/css/form.css">
-        <link rel="stylesheet" href="assets/css/modal-service.css">
-        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script>
-            // Inicialize com seu User ID
-            emailjs.init('cIfVxjtg8rCNgYV7J');
-        </script>
-    </head>
-    <!--Final Cabeça do Site-->
-    <!--Corpo do Site-->
-    <body>
-        <!--Cabeçalho do site-->
-        <header class="header">
-            <a href="#" class="logo">Port.suélio</a>
-    
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#jornada">Sobre</a>
-                <a href="#portofolio">Portfólio</a>
-                <a href="#serviços">Serviços</a>
-                <a href="#certificacoes">Certificações</a>
-            </nav>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azriel Armando — Desenvolvedor Full Stack JavaScript</title>
+  <meta name="description" content="Portfólio de Azriel Suélio Armando, desenvolvedor Full Stack JavaScript em Luanda, Angola. Aplicações web e mobile com React, React Native, Node.js e PostgreSQL — do design à implantação.">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Azriel Suélio Moreira Armando">
+  <meta property="og:title" content="Azriel Armando — Código com raiz">
+  <meta property="og:description" content="Desenvolvedor Full Stack JavaScript em Luanda, Angola.">
+  <link rel="icon" href="assets/img/favicon-iso.ico?v=3" sizes="any">
+  <link rel="icon" href="assets/img/favicon-iso.png?v=3" type="image/png" sizes="64x64">
+  <link rel="icon" href="assets/img/favicon-iso-512.png?v=3" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/img/favicon-iso-180.png?v=3">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preload" href="assets/font/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/font/Rethink_Sans/RethinkSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Inicializar o EmailJS com o User ID
+    emailjs.init('cIfVxjtg8rCNgYV7J');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
 
-            <div class="idiomas">
-                <span class="hora">
-                    <span id="hour">00</span>
-                    <span>:</span>
-                    <span id="min">00</span>
-                    <span>:</span>
-                    <span id="sec">00</span>
-                </span> 
-                <i class='bx bx-dots-horizontal-rounded'></i>
-            </div> 
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#home" class="brand" aria-label="suelio.dev — voltar ao início">
+        <img class="brand__logo" src="assets/img/logotipo-texto-branco-web.png" alt="suelio.dev" width="1000" height="72">
+      </a>
+      <nav class="navbar" id="navbar" aria-label="Navegação principal">
+          <a href="#home"><span class="idx">00</span><span class="sep" aria-hidden="true">//</span><span class="name">início</span></a>
+          <a href="#sobre"><span class="idx">01</span><span class="sep" aria-hidden="true">//</span><span class="name">sobre</span></a>
+          <a href="#jornada"><span class="idx">02</span><span class="sep" aria-hidden="true">//</span><span class="name">trilha</span></a>
+          <a href="#portofolio"><span class="idx">03</span><span class="sep" aria-hidden="true">//</span><span class="name">portfólio</span></a>
+          <a href="#serviços"><span class="idx">04</span><span class="sep" aria-hidden="true">//</span><span class="name">serviços</span></a>
+          <a href="#certificacoes"><span class="idx">05</span><span class="sep" aria-hidden="true">//</span><span class="name">certificações</span></a>
+          <a href="#contacto"><span class="idx">06</span><span class="sep" aria-hidden="true">//</span><span class="name">contacto</span></a>
+        <p class="navbar__foot"><span class="ok">●</span> luanda, angola · <a href="https://wa.me/244932101903" target="_blank" rel="noopener">whatsapp ↗</a></p>
+      </nav>
+      <div class="header__meta">
+        <p class="clock" aria-label="Hora atual em Luanda">
+          <span class="clock__city">luanda</span>
+          <span class="clock__time"><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span></span>
+        </p>
+        <p class="status"><span class="status__dot" aria-hidden="true"></span>disponível</p>
+      </div>
+      <button type="button" id="menu-icon" class="menu-toggle" aria-expanded="false" aria-controls="navbar" aria-label="Abrir menu">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
 
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </header>
-        <!--Final Cabeçalho do site-->
-        <!--conteudo principal-->
-        <main>
-            <section class="home" id="home">
-                <div class="home-content">
-                    <h3>Olá, bem vindo! (a)</h3>
-                    <h1 class="text-degrade">Sou o Suélio Armando</h1>
-                    <h2>Desenvolvedor Full Stack <span>JavaScript</span></h2>
-                    <h4>Apresentação</h4>
-                    <p>
-                        Com mais de 2 anos de
-                        experiência em
-                        desenvolvimento de aplicações
-                        web e mobile
-                        tenho
-                        habilidades em
-                        desenvolvimento de software
-                        JavaScript com foco em React, React Native, node.js, postgreSQL,
-                        Git e GitHub.
-                        Habilidade em
-                        ciclo de
-                        desenvolvimento de software,
-                        desde o design até a
-                        implantação. 
-                    </p>
-                    <p>Atualmente,
-                        busca novas oportunidades
-                        para aplicar minhas habilidades
-                        em projetos desafiadores e
-                        contribuir para o crescimento
-                        de equipes de
-                        desenvolvimento.
-                    </p>
-                    <a href="assets/pdf/cv.pdf" download="cv.pdf" class="btn piscando" rel="external" target="_blank">Download CV</a>
-                    <a href="https://wa.me/244932101903" class="btn" rel="external" target="_blank">WhatsApp</a>
-                </div>
-                <div >
-                    <div class="foto-perfil">
-                        <img src="assets/svg/undraw_mobile-application_uc2q.svg" alt="">
-                    </div>
-                </div>
-                <div class="sobre-content">
-                    <h2>Sobre mim</h2>
-                    <p>
-                        Me chamo Azriel Suélio Moreira Armando, tenho 20 anos de idade moro na Samba Trirumo, ao lado a escola de Música
-                        Capossoca.
-                    </p>
-                    <p>
-                        Sou motivado por desafios, e meu objetivo é sempre entregar código de qualidade, alinhado com as melhores práticas do mercado.
-                        Acredito que a tecnologia pode transformar o mundo, e por isso, estou sempre em busca de aprendizado contínuo para me manter 
-                        atualizado com as últimas tendências e inovações.
-                    </p>
-                    <p>
-                        Quando não estou programando, gosto de praticar esportes como natação e Basquete, também amo ouvir músicas Vocal Trance, 
-                        Eletronic Music, Desenvolvimento de Projetos pessoais de TI e interresse em Comunidades de TI.
-                    </p>
-                    <p>
-                        Estou sempre aberto a novas oportunidades e colaborações. Se quiser saber mais sobre o meu trabalho ou discutir um projeto,
-                        sinta-se à vontade para entrar em contato.
-                    </p>
-                </div>
-            </section>
-            <div class="tech-rotate scroller" data-speed="fast">
-                <div class="tag-list scroller__inner">
-                    <i class='bx bx-code-curly'></i>
-                    <i class='bx bxl-android' style='color:#ffffff' ></i>
-                    <i class='bx bxl-figma'></i>
-                    <i class='bx bxl-visual-studio'></i>
-                    <i class='bx bxl-github' style='color:#ffffff'></i>
-                    <i class='bx bxl-nodejs'></i>
-                    <i class='bx bxl-git'></i>
-                    <i class='bx bxl-apple' style='color:#ffffff' ></i>
-                    <i class='bx bxl-react'></i>
-                    <i class='bx bxl-typescript'></i>
-                    <i class='bx bxl-postgresql' style='color:#ffffff' ></i>
-                    <i class='bx bxl-jquery'></i>
-                    <i class='bx bxl-docker'></i>
-                    <i class='bx bxl-html5' style='color:#ffffff' ></i>
-                    <i class='bx bxl-apple'></i>
-                    <i class='bx bxl-aws'></i>
-                    <i class='bx bxl-tailwind-css' style='color:#ffffff' ></i>
-                </div>
-            </div>
-            <div class="sobre" id="jornada">
-                <div class="trilha-react">  
-                </div>
-                <div class="trilha-fundo-h2">
-                    <h2>Trilha em Programação</h2>
-                </div>
-                <div class="trilha">
-                    <div>
-                        <h3 class="sec">Estágio Profissional <i class='bx bxl-discord-alt bx-burst' style='color:#ffffff' ></i></h3>
-                        <h3>2023 - 2024</h3>
-                        <h3 class="pri" style="padding-bottom: 2rem;">Redes de computadores</h3>
-                        <button>Certifição<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></button>
-                    </div>
-                    <div>
-                        <p>
-                            Proficiência Elementar em projetos de redes,
-                            incluindo cálculo de endereçamento IP,
-                            configuração de roteadores e switches, e
-                            implementação de protocolos de comunicação.
-                            Conhecimento em segurança de redes, com foco
-                            em prevenção de ameaças e práticas de segurança
-                            de dados.
-                        </p>
-                        
-                    </div>
-                    
-                </div>
-                <div class="trilha">
-                    <div>
-                        <h3 class="sec">Formação Académica <i class='bx bxl-discord-alt bx-burst' style='color:#ffffff' ></i></h3>
-                        <h3>2020 - 2023</h3>
-                        <h3 class="pri" style="padding-bottom: 2rem;">Informática Geral</h3>
-                        <button>Certifição<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></button>
-                    </div>
-                    <div>
-                        <p>
-                            Médio Concluída com sucesso, no curso de Engenharia e Informática no Alda Lara,
-                            IPIAL, Instituto Politécnico Indústrial Alda Lara, tendo como contéudo programado Tecnologia de Informação e comunicação, breve introdução e redes de computadores e programação âmbito geral.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div class="trilha">
-                    <div class="">
-                        <h3 class="sec">Formação Profissional <i class='bx bxl-discord-alt bx-burst' style='color:#ffffff' ></i></h3>
-                        <h3>2022 - 2023</h3>
-                        <h3 class="pri" style="padding-bottom: 2rem;">Banco de Dados</h3>
-                        <button>Certifição<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></button>
-                    </div>
-                    <div>
-                        <p>
-                            Sólida experiência em persistência de dados, com
-                            foco em MySQL. Habilidade em criar e executar
-                            consultas SQL complexas, utilizando operadores
-                            lógicos, junções e funções de agregação.
-                            Familiaridade com ferramentas de gerenciamento
-                            de bancos de dados como Workbench/DBeaver.
-                        </p>
-                    </div>
-                </div>
-                <div class="trilha">
-                    <div>
-                        <h3 class="sec">Formação Profissional <i class='bx bxl-discord-alt bx-burst' style='color:#ffffff' ></i></h3>
-                        <h3>2022 - 2023</h3>
-                        <h3 class="pri" style="padding-bottom: 25%;">Programação web</h3>
-                        <button>Certifição<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></button>
-                    </div>
-                    <div>
-                        <p>
-                            Experiência em desenvolvimento de interfaces de
-                            usuário utilizando HTML5, CSS3 e JavaScript.
-                            Habilidade em criar layouts responsivos e interativos
-                            utilizando frameworks como React JS e React
-                            Native. Proficiência em PHP orientado a objetos para
-                            desenvolvimento de aplicações web. Experiência
-                            em criação de APIs RESTful e integração com
-                            bancos de dados MySQL. Conhecimento em
-                            padrões de projeto e boas práticas de programação.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div class="trilha">
-                    <div>
-                        <h3 class="sec">Formação Profissional <i class='bx bxl-discord-alt bx-burst' style='color:#ffffff' ></i></h3>
-                        <h3>2022 - 2023</h3>
-                        <h3 class="pri">Análise de Dados</h3>
-                        <button>Certifição<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></button>
-                    </div>
-                    <div>
-                        <p>
-                            Experiência em desenvolvimento de relatórios e
-                            dashboards utilizando Power BI. Domínio em
-                            importação, transformação e modelagem de dados.
-                            Habilidade em criar visualizações eficazes para
-                            tomada de decisão.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <div id="certificacoes" class="certificado-main">
-            <div class="cert-fundo-h2">
-                <div class="container-seta">
-                    <img src="assets/svg/react.svg" class="logo-react" alt="">
-                    <i class='bx bx-chevrons-down seta-cert'></i>
-                </div>
-                <h2>Certificações</h2>
-            </div>
-            <div class="certificado-caixas">
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação Full Stack JS<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação front-end em HTML, CSS e JavaScript, conceitos teóricos dos
-                            fundamentos da programação, criação de estrutura base com HTML, estilização com CSS, aplicação de lógica de
-                            programação com o JavaScript, Day.js para lidar com datas.
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>HTML5 Intermédio</span></li>
-                                    <li><span>CSS3 Intermédio</span></li>
-                                    <li><span>JavaScript Inicial</span></li>
-                                    <li><span>Day.JS Inicial</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                        
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/4dbe0d54-b1db-4cea-abc3-42aeb08f735c" target="_blank">Verificar</a>
-                            
-                        </aside>
-                    </div>
-                    <div class="cert-img-full">
-
-                    </div>
-
-                </div>
-
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação JS Iniciante<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação em JavaScript e Node.js, aplicação dos conceitos de variáveis,
-                            operadores,tipos de dados, estruturas de dados, controle de fluxo, estruturas de repetição, condicionais,
-                            assincronismo e criação de prompts interativos com o uso da biblioteca Inquirer.
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>Conceito de Variáveis e Operadores</span></li>
-                                    <li><span>Estrutura e Tipos de Dados </span></li>
-                                    <li><span>Controle de Fluxo</span></li>
-                                    <li><span>Prompts e Biblioteca Inquirer</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                        
-                            <div class="data piscando">Data: 13/09/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/8117a86f-25cb-4584-8416-d3a03a49b457" target="_blank">Verificar</a>
-                            
-                        </aside>
-                    </div>
-                    <div class="cert-img-iniciante">
-
-                    </div>
-
-                </div>
-
-                
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação JS Intermédio<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação back-end em Node.js, aplicação dos conceitos de API REST,
-                            utilizando TypeScript, Fastify como framework, integração do DrizzleORM + PostgreSQL, Docker e Zod para validação
-                            de dados. Desenvolvimento de uma aplicação front-end em ReactJS, aplicação dos conceitos de Propriedades,
-                            Estados e Componentes,tipagem com Typescript,tooling com Vite, interface responsiva com TailwindCSS, consumo
-                            de API Node.js, gerenciamento de dados assíncronos com TanStack Query.
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>Propriedades</span></li>
-                                    <li><span>Rest API</span></li>
-                                    <li><span>DrizzleORM e PostgreSQL </span></li>
-                                    <li><span>Tipagem com Typescript</span></li>
-                                    <li><span>Responsividade com TailwindCSS</span></li>
-                                    <li><span>Validação com Zod</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                        
-                            <div class="data piscando">Data: 13/09/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/8117a86f-25cb-4584-8416-d3a03a49b457" target="_blank">Verificar</a>
-                            
-                        </aside>
-                    </div>
-                    <div class="cert-img-iniciante">
-
-                    </div>
-
-                </div>
-
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação Inteligência Artificial<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                            
-                        </div>
-                        <p> 
-                            Desenvolvimento de aplicação Python, integração com modelo GPT da OpenAI, uso do framework
-                            Langchain, criação de banco vetorial com ChromaDB, criação de agente para consumo de dados do duckduckgo e
-                            Wikipedia, criação de agente supervisor, criação de imagem Docker, deploy via AWS (ECR, EC2 e Lambda function).
-
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>ChromaDB</span></li>
-                                    <li><span>Banco Vectorial</span></li>
-                                    <li><span>Agente Supervisor</span></li>
-                                    <li><span>Framework Langchain</span></li>
-                                    <li><span>GPT da OpenAI</span></li>
-                                    <li><span>Imagem Docker</span></li>
-                                    <li><span>Deploy com AWS</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                        
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/c1193aff-9690-4836-9f03-4b551bb53234" target="_blank">Verificar</a>
-                            
-                        </aside>
-                    </div>
-                    <div class="cert-img-ia">
-
-                    </div>
-
-                </div>
-
-
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação React JS<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação front-end em ReactJS, aplicação dos conceitos de Propriedades,
-                            Estados e Componentes, Tipagem com Typescript, Tooling com Vite, interface responsiva com TailwindCSS, consumo
-                            de API Node.js, picker de calendário.
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>Propriedades com ReactJS</span></li>
-                                    <li><span>Estados e Componentes</span></li>
-                                    <li><span>Tipagem</span></li>
-                                    <li><span>Tooling</span></li>
-                                    <li><span>TailwindCSS</span></li>
-                                    <li><span>NodeJS</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/9fc3dbaf-fa95-40ef-ac4f-a285057d6c97    " target="_blank">Verificar</a>
-                        </aside>
-                    </div>
-                    <div class="cert-img-react">
-
-                    </div>
-
-                </div>
-
-
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação React Native<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação mobile em React Native, aplicação dos conceitos de Propriedades,
-                            Estados e Componentes,tipagem com Typescript, Expo Framework, interface com Native Wind, roteamento por
-                            arquivos com Expo Router, consumo de API Node.js, picker de calendário.
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>Tipagem com Typescript</span></li>
-                                    <li><span>Expo Framework</span></li>
-                                    <li><span>Native Wind</span></li>
-                                    <li><span>Expo Router</span></li>
-                                    <li><span>API Node.js</span></li>
-                                    <li><span>Picker de Calendário</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/e4b4e80f-4e12-421e-abba-b62162318cb4" target="_blank">Verificar</a>
-                        </aside>
-                    </div>
-                    <div class="cert-img-native">
-
-                    </div>
-
-                </div>
-
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação Node.JS<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação back-end em Node.js, aplicação dos conceitos de API REST,
-                            utilizando TypeScript, Fastify como framework, integração do Prisma ORM + SQLite e Zod para validação de dados.
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>API Rest</span></li>
-                                    <li><span>Fastify</span></li>
-                                    <li><span>Prisma ORM</span></li>
-                                    <li><span>SQL Lite</span></li>
-                                    <li><span>Zod</span></li>
-                                    <li><span>Validação de Dados</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/be4f542b-9ad0-413f-9570-89929e51aa3a" target="_blank">Verificar</a>
-                        </aside>
-                    </div>
-                    <div class="cert-img-node">
-
-                    </div>
-
-                </div>
-                <!--
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação Python<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação de cadastro e gerenciamento de viagens. Utilizando Python como
-                            linguagem de programação, Flask como framework web, preparação de ambiente e boas práticas de projeto com
-                            Virtualenv, SQL, Pylint e versionamento de código usando pre-commit, boas práticas de código com entidades,
-                            services e repositories + testes automatizados com Pytest.
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>Flask Framework</span></li>
-                                    <li><span>Virtual Lenv</span></li>
-                                    <li><span>Pylint e SQL</span></li>
-                                    <li><span>Pre-commit</span></li>
-                                    <li><span>Pytest</span></li>
-                                    <li><span>Línguagem Python</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/2a81fa28-dc92-4885-aec0-75f3cc14463f" target="_blank">Verificar</a>
-                        </aside>
-                    </div>
-                    <div class="cert-img-python">
-
-                    </div>
-
-                </div>
-                -->
-                <!--
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação Go<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de uma aplicação back-end em Go com Go-Chi, utilizando ferramentas modernas para
-                            agilização do desenvolvimento junto com boas práticas visando, escalabilidade. Docker, docker compose,
-                            migrations, open-api specifications,ferramentas para geração de código Go como SQLC e goapi-gen.
-
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>Go-Chi</span></li>
-                                    <li><span>Docker</span></li>
-                                    <li><span>Docker Compose</span></li>
-                                    <li><span>Open API</span></li>
-                                    <li><span>TailwindCSS</span></li>
-                                    <li><span>Migrations</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                        
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/4b4f6657-f08e-4fcf-b63a-001d41146dd2" target="_blank">Verificar</a>
-                            
-                        </aside>
-                    </div>
-                    <div class="cert-img-go">
-
-                    </div>
-
-                </div>
-
-
-                -->    
-                <div class="container-certificado">
-                    <div class="cert-content">
-                        <h3>Certificação DevOps<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p> 
-                            Desenvolvimento de habilidades DevOps, incluindo a criação e gerenciamento de imagens e contêineres
-                            Docker, gerenciamento de múltiplos contêineres com Docker Compose, orquestração de clusters com Kubernetes,
-                            automação de pipelines CI/CD utilizando GitHub Actions, gerenciamento de infraestruturas como código (IaC) com
-                            Terraform, aplicação de conceitos de GitOps com ArgoCD, Cloud Compunting, Observabilidade e boas práticas de
-                            desenvolvimento.
-
-                        </p>
-                        <p>
-                            <h4>Competências Aprendidas</h4>
-                            <div class="cert-listas">
-                                <ul>
-                                    <li><span>Docker Compose</span></li>
-                                    <li><span>Clusters</span></li>
-                                    <li><span>Kubernetes</span></li>
-                                    <li><span>Pipelines CI/CD</span></li>
-                                    <li><span>GitHub Actions e GitOps</span></li>
-                                    <li><span>Argo CD</span></li>
-                                </ul>
-                            </div>
-                        </p>
-                        <aside>
-                        
-                            <div class="data piscando">Data: 12/07/2024</div>
-                            <a href="https://app.rocketseat.com.br/certificates/53f51fbd-60a4-4539-a7c3-994d32e86f09" target="_blank">Verificar</a>
-                            
-                        </aside>
-                    </div>
-                    <div class="cert-img-devops">
-
-                    </div>
-
-                </div>
+  <main id="conteudo">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__grid">
+        <div class="hero__head">
+          <p class="prompt"><span class="prompt__user">azriel@luanda</span><span class="prompt__path">:~</span><span class="prompt__sign">$</span> <span class="prompt__cmd">whoami</span><span class="caret" aria-hidden="true"></span></p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__line">Azriel</span>
+            <span class="hero__line">Armando<span class="hl">.</span></span>
+          </h1>
+          <p class="hero__role">Desenvolvedor Full Stack JavaScript <span class="hero__place">— Luanda, Angola</span></p>
+          <p class="hero__motto"><span class="tk-c">// código com raiz: uma tradição de algoritmos, continuada em código.</span></p>
         </div>
-        
-        <div id="portofolio" class="portofolio-main">
-            <div class="port-fundo-h2">
-                <div class="container-seta">
-                    <img src="assets/svg/react.svg" class="logo-react" alt="">
-                    <i class='bx bx-chevrons-down seta-cert'></i>
-                </div>
-                <h2>Portfólio</h2>
+
+        <figure class="hero__figure">
+          <div class="window">
+            <div class="window__bar">
+              <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="window__tab">suelio.dev</span>
+              <span class="window__meta">isotipo · v1</span>
             </div>
-
-            <div class="portofolio-caixas">
-
-                <div class="container-portofolio">
-                    <div class="port-img-kixikila">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Kixikila<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Marketplace elegante e intuitivo, inspirado no OLX e Facebook Marketplace, mas com uma identidade visual calorosa e africana.</p>
-                        <aside>
-                            <div class="data">Data:</div>
-                            <a href="https://kamba-market-angola.lovable.app" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-social-help">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Social Help<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Sistema de gestão de programas sociais com design premium, responsivo e intuitivo</p>
-                        <aside>
-                            <div class="data">Data: 12/02/2026</div>
-                            <a href="https://help-stream-logic.lovable.app" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-rede-social">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Nexus<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Simulação frontend completa de uma rede social que junte as melhores funcionalidades das seguinte redes, whatsapp, instagram, facebook, telegram, discord e outras tudo otimizado e apenas em um único ambiente para dar a melhor experiência no usuário</p>
-                        <aside>
-                            <div class="data">Data:</div>
-                            <a href="https://v0-social-network-frontend-flax.vercel.app/" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                <!--
-                <div class="container-portofolio">
-                    <div class="port-img-faturapro">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>FaturaPro<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>
-                            Sistema para emissão de faturas e controle financeiro para pequenas e médias empresas.
-                        </p>
-                        <aside>
-                            <div class="data">Data:</div>
-                            <a href="https://unifiedflow-billing.lovable.app" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-                -->  
-
-                <div class="container-portofolio">
-                    <div class="port-img-pizzaria">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Plataforma para gestão de pizzaria<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Desenvolvido primordialmente usando tecnologias com React Native, NodeJS, TypeScript e Figma</p>
-                        <aside>
-                            <div class="data">Data:</div>
-                            <a href="#portofolio" target="_blank" class="piscando">Brevimente</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-betrust">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Betrust Investimentos<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>A BeTrust combina tecnologia e estratégia para maximizar o seu potencial de investimento - com segurança, clareza e resultados reais.</p>
-                        <aside>
-                            <div class="data">Data: 18/12/2025</div>
-                            <a href="https://be-trust.vercel.app/" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-nvcode">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Plataforma official nvcode<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Criamos experiências digitais que unem inovação, desempenho e design. Do código à entrega, transformamos ideias em produtos que inspiram e geram resultados. Na NVCODE, tecnologia é estratégia, impacto e performance. Cada projeto é desenvolvido com precisão e foco em excelência.</p>
-                        <aside>
-                            <div class="data">Data: 18/12/2025</div>
-                            <a href="https://nvcode-psi.vercel.app/" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-
-
-                <div class="container-portofolio">
-                    <div class="port-img-portalnoticias">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Plataforma de noticias da nvcode<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Criamos experiências digitais que unem inovação, desempenho e design. Do código à entrega, transformamos ideias em produtos que inspiram e geram resultados. Na NVCODE, tecnologia é estratégia, impacto e performance. Cada projeto é desenvolvido com precisão e foco em excelência.</p>
-                        <aside>
-                            <div class="data">Data: 17/12/2025</div>
-                            <a href="https://nvcode-psi.vercel.app/noticias" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-geladaria">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Design UI - UX Koolpix<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Planner</h4>
-                        <p>Design UI - UX nova Koolpix planejado no Figma, o app Koolpix irá permitir o carregamento de fotos edição de fotos, adição de moldura nas fotos adição das fotos editadas no carrinha e pagamento das mesma permitindo assim em seguida a encomenda das mesmas</p>
-                        <aside>
-                            <div class="data">Data: 10/11/2023</div>
-                            <a href="https://www.figma.com/design/BUk1VGSQUvjvPwh1gPuCGR/KoolPix?node-id=0-1&p=f&t=XGtFIrbhW8CbfBaZ-0" target="_blank" class="piscando">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-portfolio">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Portfólio React<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Versão futurista do meu portfólio pessoal, construída com React, Vite e TailwindCSS. Permite visualizar os serviços oferecidos de forma interativa e dinâmica, competências, projetos, trilha em programação, certificações, mídias sociais, link para o github e o link para o download do Curriculum </p>
-                        <aside>
-                            <div class="data">Data: 24/05/2025</div>
-                            <a href="https://github.com/azriel90github/Portfolio" target="_blank">Código</a> 
-                        </aside>
-                    </div>
-                </div>
-
-                 <div class="container-portofolio">
-                    <div class="port-img-planner">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Planejador de Viagens Full Stack<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Aplicação Web Full Stack, construída com Figma, Vite, React, TailwindCSS, NodeJS, Postman e Axios, que permite
-                           aos usuários planejar datas de viagens, locais, convidar amigos e agendar tarefas nos respectivos dias das Viagens.   
-                        </p>
-                        <aside>
-                            <div class="data">Data: 10/11/2023</div>
-                            <a href="https://planner-full-stack.vercel.app/" class="piscando" target="_blank">Abrir</a>
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-streaming">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Plataforma Streaming de Cursos<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Nativo</h4>
-                        <div class="separador">
-                        
-                        </div>
-                        <p>Desenvolvido 100% código limpo, zero framework, em HTML5 CSS3 e JavaScript a plataforma permite assistir uma variedade de  cursos de forma intuitiva e responsiva, acesso completo e gratuito para quêm deseja iniciar sua trilha no mundo da programação</p>
-                        <aside>
-                            <div class="data">Data: 12/04/2025</div>
-                            <a href="https://projecto-pm.vercel.app/" class="piscando" target="_blank">Abrir</a>
-                        </aside>
-                    </div>
-                </div>
-                
-                <div class="container-portofolio">
-                    <div class="port-img-hamburguer">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Hamburgaria Virtual<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <div class="separador">
-                        
-                        </div>
-                        <p>Planejado no Figma e desenvolvido a frontend com reactjs, backend com nodejs e banco postgres, a aplicação permite o comércio online avançado, faturamento em tempo real por parte do cliente, geração de faturas personalizadas, e registro de todas as encomendas realizadas e o seu faturamento total</p>
-                        <aside>
-                            <div class="data">Data: 29/03/2025</div>
-                            <a href="https://github.com/azriel90github/amarelinha-virtual">Código</a> 
-                        </aside>
-                    </div>
-                </div>
-                <div class="container-portofolio">
-                    <div class="port-img-gelado">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Geladaria Virtual<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <div class="separador">
-                        
-                        </div>
-                        <p>Planejado no Figma e desenvolvido a frontend com reactjs, backend com nodejs e banco postgres, a aplicação permite o comércio online avançado, faturamento em tempo real por parte do cliente, geração de faturas personalizadas, e registro de todas as encomendas realizadas e o seu faturamento total</p>
-                        <aside>
-                            <div class="data">Data: 10/11/2023</div>
-                            <a href="https://github.com/azriel90github/ItalaVirtual">Código</a> 
-                        </aside>
-                    </div>
-                </div>
-                <div class="container-portofolio">
-                    <div class="port-img-stack">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Planejador de Tarefas Full Stack<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Nativo</h4>
-                        <p>Sistema Web Full Stack desenvolvido com HTML5, CSS3, e JavaScript Avançado com DayPicker, sistema esse que permite ao usuário cadastrar atividades, respectivos dias e horas.</p>
-                        <aside>
-                            <div class="data">Data: 10/11/2023</div>
-                            <a href="https://planejador-js.vercel.app/" class="piscando" target="_blank" rel="external">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-            
-                <div class="container-portofolio">
-                    <div class="port-img-sala">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Sala Virtual Full Stack<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Framework</h4>
-                        <p>Aplicação Web Full Stack desenvolvido com ReactJS e Golang, aplicação que permite aos usuários
-                            criar salas virtuais, e adicionar perguntas relevantes para a Comunidade, e possuí recursos como partilha e WebSockets.
-                        </p>
-                        <aside>
-                            <div class="data">Data: 10/11/2023</div>
-                            <a href="https://github.com/azriel90github/SalaVirtual-Go" target="_blank">Código</a>
-                        </aside>
-                    </div>
-                </div>
-
-                <div class="container-portofolio">
-                    <div class="port-img-geladariaDev">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Design UI - Geladaria Virtual<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Planner</h4>
-                        <p>UI/UX Planajado no figma, permite ao usuário fazer encomendas de qualquer lugar e a qualquer hora
-                            de forma fácil, rápida e eficazes, aumentando a taxa de vendas e aumento do número de clientes por parte da Geladaria.
-                        </p>
-                        <aside>
-                            <div class="data">Data: 10/11/2023</div>
-                            <a href="https://www.figma.com/design/Edr5pQecnJIkOi6smoLw8r/Geladaria-Online?node-id=0-1&p=f&t=1E4Ncvxqw5I345uo-0" target="_blank">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-                <div class="container-portofolio">
-                    <div class="port-img-metas">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Design UI - Plataforma Freelancer<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <h4>Planner</h4>
-                        <div class="separador">
-                        
-                        </div>
-                        <p>Desenvolvido primordialmente usando tecnologias com React Native, NodeJS, TypeScript e Figma</p>
-                        <aside>
-                            <div class="data">Data: 10/11/2023</div>
-                            <a href="https://www.figma.com/design/TQJ4SFFHfwfaJtVFXpsGHN/Freelancer-Platforms?t=1E4Ncvxqw5I345uo-0" target="_blank">Abrir</a> 
-                        </aside>
-                    </div>
-                </div>
-                <div class="container-portofolio">
-                    <div class="port-img">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Brevemente...<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p>Desenvolvido primordialmente usando tecnologias com React Native, NodeJS, TypeScript e Figma</p>
-                        <aside>
-                            <div class="data">Data:</div>
-                            <a href="https://github.com/azriel90github" target="_blank">GitHub</a> 
-                        </aside>
-                    </div>
-                </div>
-                <div class="container-portofolio">
-                    <div class="port-img">
-
-                    </div>
-                    <div class="port-content">
-                        <h3>Brevemente...<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h3>
-                        <div class="separador">
-                        
-                        </div>
-                        <p>Desenvolvido primordialmente usando tecnologias com React Native, NodeJS, TypeScript e Figma</p>
-                        <aside>
-                            <div class="data">Data:</div>
-                            <a href="https://github.com/azriel90github" target="_blank">GitHub</a> 
-                        </aside>
-                    </div>
-                </div>
-                
+            <div class="window__body">
+              <div class="window__canvas window__canvas--iso">
+                <img class="hero__iso" src="assets/img/isotipo-branco-web.png" alt="Isotipo suelio.dev: perfil de uma cabeça em grelha com o símbolo de código &lt;/&gt;" width="600" height="671">
+              </div>
+              <pre class="window__source" aria-hidden="true"><code><span class="line"><span class="tk-c">// suelio.dev — isotipo</span></span><span class="line"><span class="tk-k">const</span> marca <span class="tk-p">=</span> {</span><span class="line">  perfil: <span class="tk-s">'Azriel Suélio Armando'</span>,</span><span class="line">  grelha: <span class="tk-s">'pensamento estruturado'</span>,</span><span class="line">  simbolo: <span class="tk-s">'&lt;/&gt;'</span>,</span><span class="line">};</span><span class="line"><span class="tk-k">export default</span> marca;</span></code></pre>
             </div>
+            <div class="window__status" aria-hidden="true">
+              <span class="run">▸ a carregar suelio.dev…</span>
+              <span class="done"><span class="ok">✓</span> suelio.dev · full stack javascript</span>
+            </div>
+          </div>
+          <figcaption class="hero__caption">
+            <span class="tk-c">// suelio.dev — a mente por trás do código.</span>
+          </figcaption>
+        </figure>
+
+        <div class="hero__body">
+          <p class="hero__intro">
+            Desenvolvo aplicações web e mobile há mais de 2 anos — com React, React Native, Node.js, PostgreSQL,
+            Git e GitHub — e acompanho o ciclo completo do software, do design à implantação. Atualmente, busco
+            novas oportunidades para aplicar as minhas competências em projetos desafiadores e contribuir para o
+            crescimento de equipas de desenvolvimento.
+          </p>
+          <div class="hero__actions">
+            <a href="assets/pdf/cv.pdf" download="cv.pdf" class="btn btn--primary">Descarregar CV <span aria-hidden="true">↓</span></a>
+            <a href="https://wa.me/244932101903" class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        
-        <div class="serv-fundo-h2">
-            <div class="container-seta">
-                <img src="assets/svg/react.svg" class="logo-react" alt="">
-                <i class='bx bx-chevrons-down seta-cert'></i>
-            </div>
-            <h2 class="services-title">Serviços</h2>
+
+        <dl class="statusbar hero__facts">
+          <div><dt>experiência</dt><dd>2+ anos</dd></div>
+          <div><dt>foco</dt><dd>web &amp; mobile</dd></div>
+          <div><dt>stack</dt><dd>react · node.js · postgresql</dd></div>
+          <div><dt>luanda</dt><dd><span data-clock>--:--</span> · 8°50′S 13°14′E</dd></div>
+        </dl>
+      </div>
+
+    </section>
+
+    <!-- Ferramentas -->
+    <div class="tech-band scroller" data-speed="slow" aria-label="Tecnologias e ferramentas">
+      <ul class="tag-list scroller__inner">
+          <li>React</li>
+          <li>React Native</li>
+          <li>Node.js</li>
+          <li>TypeScript</li>
+          <li>JavaScript</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>AWS</li>
+          <li>Tailwind CSS</li>
+          <li>Figma</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Android</li>
+          <li>iOS</li>
+          <li>jQuery</li>
+          <li>VS Code</li>
+      </ul>
+    </div>
+
+    <!-- 01 // sobre -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <header class="section-head" data-reveal>
+        <p class="section-head__index"><svg class="marker" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="on" cx="3" cy="3" r="1.6"/><circle cx="9" cy="3" r="1.6"/><circle cx="15" cy="3" r="1.6"/><circle cx="3" cy="9" r="1.6"/><circle cx="9" cy="9" r="1.6"/><circle cx="15" cy="9" r="1.6"/><circle cx="3" cy="15" r="1.6"/><circle cx="9" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/></svg><span class="idx">01</span><span class="sep" aria-hidden="true">//</span><span class="name">sobre</span></p>
+        <h2 class="section-head__title" id="sobre-title">Sobre <span class="hl">mim</span></h2>
+      </header>
+      <div class="about">
+        <figure class="portrait" data-reveal>
+          <div class="portrait__frame">
+            <img src="assets/img/perfil/02.jpg" alt="Retrato de Azriel Suélio Moreira Armando, de fato e gravata" width="1600" height="1600" loading="lazy" decoding="async">
+          </div>
+          <figcaption>azriel-suelio-armando.jpg · luanda</figcaption>
+        </figure>
+        <div class="about__text">
+          <blockquote class="pull-quote" data-reveal>
+            <p>Acredito que a tecnologia pode transformar o <span class="hl">mundo</span> — por isso estou sempre a aprender.</p>
+          </blockquote>
+          <div class="prose" data-reveal>
+            <p>Chamo-me Azriel Suélio Moreira Armando, tenho 20 anos e moro na Samba, no Trirumo, ao lado da escola de música Capossoca.</p>
+            <p>Sou motivado por desafios, e o meu objetivo é sempre entregar código de qualidade, alinhado com as melhores práticas do mercado. Acredito que a tecnologia pode transformar o mundo e, por isso, estou sempre em busca de aprendizagem contínua para me manter atualizado com as últimas tendências e inovações.</p>
+            <p>Quando não estou a programar, gosto de praticar desportos como natação e basquetebol, e adoro ouvir Vocal Trance e música eletrónica. Dedico-me também a projetos pessoais de TI e tenho interesse em comunidades de tecnologia.</p>
+            <p>Estou sempre aberto a novas oportunidades e colaborações. Se quiser saber mais sobre o meu trabalho ou discutir um projeto, sinta-se à vontade para <a class="text-link" href="#contacto">entrar em contacto</a>.</p>
+          </div>
+          <figure class="code" data-reveal>
+            <figcaption class="code__bar"><span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>azriel.ts</span></figcaption>
+            <pre><code><span class="line"><span class="tk-k">const</span> <span class="tk-v">azriel</span> <span class="tk-p">=</span> {</span><span class="line">  <span class="tk-a">idade</span>: <span class="tk-n">20</span>,</span><span class="line">  <span class="tk-a">base</span>: <span class="tk-s">'Samba, Luanda'</span>,</span><span class="line">  <span class="tk-a">desporto</span>: [<span class="tk-s">'natação'</span>, <span class="tk-s">'basquetebol'</span>],</span><span class="line">  <span class="tk-a">música</span>: [<span class="tk-s">'Vocal Trance'</span>, <span class="tk-s">'eletrónica'</span>],</span><span class="line">  <span class="tk-a">interesses</span>: [<span class="tk-s">'comunidades de TI'</span>, <span class="tk-s">'projetos pessoais'</span>],</span><span class="line">  <span class="tk-a">disponível</span>: <span class="tk-n">true</span>,</span><span class="line">};</span></code></pre>
+          </figure>
         </div>
-        <div id="serviços">
-            
-            <div class="serviços">
-                <div class="serv">
-                    <h3>Desgin UI/UX</h3>
-                    <p class="content-img">
-                        <img src="assets/img/photoshop.png" alt="photoshop">
-                        <img src="assets/img/figma.png" alt="figma">
-                        <img src="assets/img/xd.png" alt="adobe-xd">
-                    </p>
-                    <!--
-                    <p class="content-preço">
+      </div>
+    </section>
 
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contrato Inicial</span> <br>
-                        3 meses
-                        Por <br> apenas 75.000 kz <br>
-                        <span style="color: #17CAF6; font-size: 1.3rem;">$economia de 45.000 kz</span> 
-                        <span class="separador-sec">ou</span>
-                        
-                        <span style="color: #17CAF6; font-weight: 700; font-size: 1.3rem;">Contratação Permanente</span> <br>
-                        Salário
-                        Por <br> apenas 83.000 kz <br> mês <br>
-                        <span style="color: #17CAF6; font-size: 1.3rem;">$economia de 45.000 kz</span>
+    <!-- 02 // trilha -->
+    <section class="section" id="jornada" aria-labelledby="trilha-title">
+      <header class="section-head" data-reveal>
+        <p class="section-head__index"><svg class="marker" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="on" cx="3" cy="3" r="1.6"/><circle class="on" cx="9" cy="3" r="1.6"/><circle cx="15" cy="3" r="1.6"/><circle cx="3" cy="9" r="1.6"/><circle cx="9" cy="9" r="1.6"/><circle cx="15" cy="9" r="1.6"/><circle cx="3" cy="15" r="1.6"/><circle cx="9" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/></svg><span class="idx">02</span><span class="sep" aria-hidden="true">//</span><span class="name">trilha</span></p>
+        <h2 class="section-head__title" id="trilha-title">Trilha em <span class="hl">programação</span></h2>
+        <p class="section-head__lede">Formação, estágio e as bases sobre as quais construo.</p>
+      </header>
+      <ol class="ledger">
+        <li class="ledger__row" data-reveal>
+          <p class="ledger__when"><span class="ledger__num">T.01</span><span class="ledger__years">2023–2024</span></p>
+          <div class="ledger__head">
+            <p class="ledger__type">#estágio-profissional</p>
+            <h3 class="ledger__title">Redes de computadores</h3>
+          </div>
+          <p class="ledger__desc">Proficiência elementar em projetos de redes, incluindo cálculo de endereçamento IP, configuração de roteadores e switches, e implementação de protocolos de comunicação. Conhecimento em segurança de redes, com foco em prevenção de ameaças e práticas de segurança de dados.</p>
+        </li>
+        <li class="ledger__row" data-reveal>
+          <p class="ledger__when"><span class="ledger__num">T.02</span><span class="ledger__years">2020–2023</span></p>
+          <div class="ledger__head">
+            <p class="ledger__type">#formação-académica</p>
+            <h3 class="ledger__title">Informática Geral</h3>
+          </div>
+          <p class="ledger__desc">Ensino médio concluído com sucesso no curso de Engenharia e Informática no IPIAL — Instituto Politécnico Industrial Alda Lara —, tendo como conteúdo programático Tecnologias de Informação e Comunicação, uma breve introdução a redes de computadores e programação em âmbito geral.</p>
+        </li>
+        <li class="ledger__row" data-reveal>
+          <p class="ledger__when"><span class="ledger__num">T.03</span><span class="ledger__years">2022–2023</span></p>
+          <div class="ledger__head">
+            <p class="ledger__type">#formação-profissional</p>
+            <h3 class="ledger__title">Banco de Dados</h3>
+          </div>
+          <p class="ledger__desc">Sólida experiência em persistência de dados, com foco em MySQL. Habilidade em criar e executar consultas SQL complexas, utilizando operadores lógicos, junções e funções de agregação. Familiaridade com ferramentas de gestão de bases de dados como Workbench e DBeaver.</p>
+        </li>
+        <li class="ledger__row" data-reveal>
+          <p class="ledger__when"><span class="ledger__num">T.04</span><span class="ledger__years">2022–2023</span></p>
+          <div class="ledger__head">
+            <p class="ledger__type">#formação-profissional</p>
+            <h3 class="ledger__title">Programação Web</h3>
+          </div>
+          <p class="ledger__desc">Experiência em desenvolvimento de interfaces de usuário com HTML5, CSS3 e JavaScript. Habilidade em criar layouts responsivos e interativos com frameworks como React JS e React Native. Proficiência em PHP orientado a objetos para aplicações web. Experiência na criação de APIs RESTful e integração com bases de dados MySQL. Conhecimento de padrões de projeto e boas práticas de programação.</p>
+        </li>
+        <li class="ledger__row" data-reveal>
+          <p class="ledger__when"><span class="ledger__num">T.05</span><span class="ledger__years">2022–2023</span></p>
+          <div class="ledger__head">
+            <p class="ledger__type">#formação-profissional</p>
+            <h3 class="ledger__title">Análise de Dados</h3>
+          </div>
+          <p class="ledger__desc">Experiência no desenvolvimento de relatórios e dashboards com Power BI. Domínio de importação, transformação e modelagem de dados. Habilidade em criar visualizações eficazes para a tomada de decisão.</p>
+        </li>
+      </ol>
+    </section>
 
-                    </p>    
-                    -->
-                    
-                    <div class="separador">
-                    </div>
-                    <div id="suporte">
-                        <h4>Suporte<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h4>
-                        <p style="margin-bottom: 5px;">
-                            
-                            <span>&#x2714;</span> Contratação inicial <br>
-                            <span>&#x2714;</span> Partilha do Projecto <br>
-                            <span>&#x2714;</span> Versão Mobile <br>
-                            <span>&#x2714;</span> Fóruns de Discussão <br>
-                            <span>&#x2714;</span> Prototipação <br>
-                            <span>&#x2714;</span> Freelancer <br>
-                            <span>&#x2714;</span> Contratação Permanente
-                        </p>
-                    </div>
-                    <div class="separador">
-                        
-                    </div>
-                    <a href="#contacto" class="selecionar-pacote" data-pacote="Desgin UI/UX"><button >Selecionar Pacote</button></a>
-                    <div class="final-serv">
-                        Pacote exclusivo
-                        <i class='bx bxl-discord-alt bx-tada' style='color:#ffffff' ></i>
-                    </div>
-                </div>
+    <!-- 03 // portfólio -->
+    <section class="section" id="portofolio" aria-labelledby="portfolio-title">
+      <header class="section-head" data-reveal>
+        <p class="section-head__index"><svg class="marker" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="on" cx="3" cy="3" r="1.6"/><circle class="on" cx="9" cy="3" r="1.6"/><circle class="on" cx="15" cy="3" r="1.6"/><circle cx="3" cy="9" r="1.6"/><circle cx="9" cy="9" r="1.6"/><circle cx="15" cy="9" r="1.6"/><circle cx="3" cy="15" r="1.6"/><circle cx="9" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/></svg><span class="idx">03</span><span class="sep" aria-hidden="true">//</span><span class="name">portfólio</span></p>
+        <h2 class="section-head__title" id="portfolio-title">Trabalho <span class="hl">selecionado</span></h2>
+        <p class="section-head__lede">Produtos, plataformas e protótipos — do Figma ao deploy.</p>
+      </header>
+      <div class="projects" id="lista-projetos">
+        <article class="project project--feature" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/ecommerce.png" alt="Página inicial do marketplace Kixikila com anúncios em destaque" width="1499" height="773" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.01</span><span class="tag">#framework</span></p>
+            <h3 class="project__title"><a class="project__link" href="https://kamba-market-angola.lovable.app" target="_blank" rel="noopener">Kixikila</a></h3>
+            <p class="project__desc">Marketplace elegante e intuitivo, inspirado no OLX e no Facebook Marketplace, mas com uma identidade visual calorosa e africana.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        <article class="project project--wide" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/social-help.png" alt="Painel de controlo do Social Help com indicadores de famílias e programas" width="1503" height="774" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.02</span><span class="tag">#framework</span><time datetime="2026-02-12">12/02/2026</time></p>
+            <h3 class="project__title"><a class="project__link" href="https://help-stream-logic.lovable.app" target="_blank" rel="noopener">Social Help</a></h3>
+            <p class="project__desc">Sistema de gestão de programas sociais com design premium, responsivo e intuitivo.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        <article class="project" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/rede-social.png" alt="Interface da rede social Nexus com feed, stories e mensagens" width="1506" height="764" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.03</span><span class="tag">#framework</span></p>
+            <h3 class="project__title"><a class="project__link" href="https://v0-social-network-frontend-flax.vercel.app/" target="_blank" rel="noopener">Nexus</a></h3>
+            <p class="project__desc">Simulação frontend completa de uma rede social que junta as melhores funcionalidades do WhatsApp, Instagram, Facebook, Telegram, Discord e outras — tudo otimizado num único ambiente, para dar ao usuário a melhor experiência.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        <!--
+        <article class="project" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/fatura.png" alt="Painel do sistema FaturaPro" width="1509" height="775" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.—</span><span class="tag">#framework</span></p>
+            <h3 class="project__title"><a class="project__link" href="https://unifiedflow-billing.lovable.app" target="_blank" rel="noopener">FaturaPro</a></h3>
+            <p class="project__desc">Sistema para emissão de faturas e controlo financeiro para pequenas e médias empresas.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        -->
+        <article class="project project--soon" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/pizzaria.png" alt="Ecrã de login da plataforma de gestão de pizzaria" width="1817" height="1070" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.04</span><span class="tag">#framework</span></p>
+            <h3 class="project__title">Plataforma para gestão de pizzaria</h3>
+            <p class="project__desc">Desenvolvida primordialmente com React Native, Node.js, TypeScript e Figma.</p>
+            <span class="project__action project__action--soon">em breve</span>
+          </div>
+        </article>
+        <article class="project" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/betrust.png" alt="Página inicial da Betrust Investimentos" width="1817" height="1072" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.05</span><span class="tag">#framework</span><time datetime="2025-12-18">18/12/2025</time></p>
+            <h3 class="project__title"><a class="project__link" href="https://be-trust.vercel.app/" target="_blank" rel="noopener">Betrust Investimentos</a></h3>
+            <p class="project__desc">A BeTrust combina tecnologia e estratégia para maximizar o seu potencial de investimento — com segurança, clareza e resultados reais.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        <article class="project project--wide" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/nvcode.png" alt="Página inicial da plataforma nvcode, com o título Soluções Digitais" width="1813" height="1074" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.06</span><span class="tag">#framework</span><time datetime="2025-12-18">18/12/2025</time></p>
+            <h3 class="project__title"><a class="project__link" href="https://nvcode-psi.vercel.app/" target="_blank" rel="noopener">Plataforma oficial nvcode</a></h3>
+            <p class="project__desc">Criamos experiências digitais que unem inovação, desempenho e design. Do código à entrega, transformamos ideias em produtos que inspiram e geram resultados. Na NVCODE, tecnologia é estratégia, impacto e performance. Cada projeto é desenvolvido com precisão e foco em excelência.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        <article class="project project--feature project--extra" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/noticias.png" alt="Portal de notícias da nvcode com notícias em destaque" width="1810" height="1073" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.07</span><span class="tag">#framework</span><time datetime="2025-12-17">17/12/2025</time></p>
+            <h3 class="project__title"><a class="project__link" href="https://nvcode-psi.vercel.app/noticias" target="_blank" rel="noopener">Plataforma de notícias da nvcode</a></h3>
+            <p class="project__desc">Criamos experiências digitais que unem inovação, desempenho e design. Do código à entrega, transformamos ideias em produtos que inspiram e geram resultados. Na NVCODE, tecnologia é estratégia, impacto e performance. Cada projeto é desenvolvido com precisão e foco em excelência.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        <article class="project project--extra" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/portfolio.png" alt="Página inicial do Portfólio React" width="1502" height="771" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.08</span><span class="tag">#framework</span><time datetime="2025-05-24">24/05/2025</time></p>
+            <h3 class="project__title"><a class="project__link" href="https://github.com/azriel90github/Portfolio" target="_blank" rel="noopener">Portfólio React</a></h3>
+            <p class="project__desc">Versão futurista do meu portfólio pessoal, construída com React, Vite e TailwindCSS. Permite visualizar de forma interativa e dinâmica os serviços oferecidos, competências, projetos, trilha em programação, certificações, redes sociais, o GitHub e o download do currículo.</p>
+            <span class="project__action" aria-hidden="true">código ↗</span>
+          </div>
+        </article>
+        <article class="project project--extra" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/pm-streaming/07.png" alt="Página inicial da plataforma de cursos com o título Aprenda a programar" width="1484" height="774" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.09</span><span class="tag">#nativo</span><time datetime="2025-04-12">12/04/2025</time></p>
+            <h3 class="project__title"><a class="project__link" href="https://projecto-pm.vercel.app/" target="_blank" rel="noopener">Plataforma Streaming de Cursos</a></h3>
+            <p class="project__desc">Desenvolvida 100% em código limpo, sem frameworks, com HTML5, CSS3 e JavaScript. A plataforma permite assistir a uma variedade de cursos de forma intuitiva e responsiva, com acesso completo e gratuito para quem deseja iniciar a sua trilha no mundo da programação.</p>
+            <span class="project__action" aria-hidden="true">abrir ↗</span>
+          </div>
+        </article>
+        <article class="project project--extra" data-reveal>
+          <figure class="project__media">
+            <img src="assets/img/hamburgaria.jpeg" alt="Formulário de encomenda da Hamburgaria Virtual" width="1374" height="708" loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body">
+            <p class="project__meta"><span class="project__num">P.10</span><span class="tag">#framework</span><time datetime="2025-03-29">29/03/2025</time></p>
+            <h3 class="project__title"><a class="project__link" href="https://github.com/azriel90github/amarelinha-virtual" target="_blank" rel="noopener">Hamburgaria Virtual</a></h3>
+            <p class="project__desc">Planeado no Figma e desenvolvido com ReactJS no frontend, Node.js no backend e base de dados PostgreSQL. A aplicação permite comércio online avançado, faturamento em tempo real por parte do cliente, geração de faturas personalizadas e registo de todas as encomendas realizadas e do seu faturamento total.</p>
+            <span class="project__action" aria-hidden="true">código ↗</span>
+          </div>
+        </article>
+      </div>
+      <button type="button" class="projects-toggle" aria-controls="lista-projetos" aria-expanded="false">
+        <span class="projects-toggle__more">ver mais 4 projetos</span>
+        <span class="projects-toggle__less">mostrar menos</span>
+      </button>
+
+      <div class="archive" data-reveal>
+        <p class="archive__cmd"><span class="prompt__sign">$</span> ls -la ~/projetos/arquivo <span class="tk-c">// projetos de 2023 e designs</span></p>
+        <ol class="archive__list">
+          <li class="archive__row" data-reveal>
+            <span class="archive__num">P.11</span>
+            <img class="archive__thumb" src="assets/img/gelado.png" alt="" width="1599" height="899" loading="lazy" decoding="async">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://www.figma.com/design/BUk1VGSQUvjvPwh1gPuCGR/KoolPix?node-id=0-1&amp;p=f&amp;t=XGtFIrbhW8CbfBaZ-0" target="_blank" rel="noopener">Design UI/UX Koolpix</a></h4>
+              <p class="archive__desc">Design UI/UX da nova Koolpix, planeado no Figma. A app permitirá carregar e editar fotos, adicionar molduras, juntar as fotos editadas ao carrinho e pagá-las, permitindo em seguida a sua encomenda.</p>
             </div>
-            <div class="serviços">
-                <div class="serv">
-                    <h3>Frontend Developer</h3>                   
-                    <p style="margin-bottom: 5px;" class="content-img">
-                        <img src="assets/img/react.png" alt="react">
-                        <img src="assets/img/social.png" alt="css3">
-                        <img src="assets/img/html.png" alt="html5">
-                    
-                    </p>
-                    <!--
-                    <p class="content-preço">
-                        
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contrato Inicial</span> <br>
-                        3 meses
-                        Por <br> apenas 77.000 kz <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 40.000 kz</span> 
-                        <span class="separador-sec">ou</span>
-                        
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contratação Permanente</span> <br>
-                        Salário
-                        Por <br> apenas 80.000 kz <br> mês <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 40.000 kz</span>
-
-                    </p>
-                    -->
-                    
-                    <div class="separador">
-                        
-                    </div>
-                    
-                    <div id="suporte">
-                        <h4>Suporte<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h4>
-                        <p>
-                    
-                            <span>&#x2714;</span> Contratação inicial <br>
-                            <span>&#x2714;</span> HTML5 e CSS3 Avançado <br>
-                            <span>&#x2714;</span> JavaScript Intermédio <br>
-                            <span>&#x2714;</span> ReactJS Intermédio <br>
-                            <span>&#x2714;</span> Design Responsivo  <br>
-                            <span>&#x2714;</span> Suporte nodejs <br>
-                            <span>&#x2714;</span> Contratação Permanente
-                        </p>
-                    </div>
-                    <div class="separador">
-                        
-                    </div>
-                    <a href="#contacto" class="selecionar-pacote" data-pacote="Frontend Developer">
-                        <button >Selecionar Pacote</button>
-                    </a>
-                    <div class="final-serv">
-                        Pacote exclusivo
-                        <i class='bx bxl-discord-alt bx-tada' style='color:#ffffff' ></i>
-                    </div>
-                </div>
+            <span class="tag">#planner</span>
+            <time class="archive__date" datetime="2023-11-10">10/11/2023</time>
+            <span class="archive__action" aria-hidden="true">abrir ↗</span>
+          </li>
+          <li class="archive__row" data-reveal>
+            <span class="archive__num">P.12</span>
+            <img class="archive__thumb" src="assets/img/plano_readme.jpeg" alt="" width="1374" height="710" loading="lazy" decoding="async">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://planner-full-stack.vercel.app/" target="_blank" rel="noopener">Planejador de Viagens Full Stack</a></h4>
+              <p class="archive__desc">Aplicação web full stack, construída com Figma, Vite, React, TailwindCSS, Node.js, Postman e Axios, que permite aos usuários planear datas e locais de viagem, convidar amigos e agendar tarefas para cada dia da viagem.</p>
             </div>
-            <div class="serviços">
-                <div class="serv">
-                    <h3 class="piscando">Backend Developer</h3>
-                    <p class="content-img">
-                        <img src="assets/img/node-js.png" alt="golang">
-                        <img src="assets/img/postgre.png" alt="postgres">
-                        <img src="assets/img/docker.png" alt="">  
-                    </p>
-                    <!--
-                    <p class="content-preço negativo">
-
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contrato Inicial</span> <br>
-                        3 meses
-                        Por <br> apenas 80.000 kz <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 60.000 kz</span> 
-                        <span class="separador-sec">ou</span>
-                        
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contratação Permanente</span> <br>
-                        Salário
-                        Por <br> apenas 83.000 kz <br> mês <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 70.000 kz</span>
-
-                    </p>
-                    
-                    -->
-                    <div class="separador">
-                        
-                    </div>
-                    <div id="suporte">
-                        <h4>Suporte<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h4>
-                        <p>
-                            <!---->
-                            <span>&#x2714;</span> Contratação inicial <br>
-                            <span>&#x2714;</span> nodejs Intermédio <br>
-                            <span>&#x2714;</span> Suporte Zod <br>
-                            <span>&#x2714;</span> Suporte Fastify <br>
-                            <span>&#x2714;</span> Suporte Postgres <br>
-                            <span>&#x2714;</span> Suporte Docker <br>
-                            <span>&#x2714;</span> Contratação Permanente
-                        </p>
-                    </div>
-                    <div class="separador">
-                        
-                    </div>
-                    <a href="#contacto" class="selecionar-pacote" data-pacote="Backend Developer">
-                        <button>Selecionar Pacote</button>
-                    </a>
-                    <div class="final-serv">
-                        Pacote exclusivo
-                        <i class='bx bxl-discord-alt bx-tada' style='color:#ffffff' ></i>
-                    </div>
-                </div>
+            <span class="tag">#framework</span>
+            <time class="archive__date" datetime="2023-11-10">10/11/2023</time>
+            <span class="archive__action" aria-hidden="true">abrir ↗</span>
+          </li>
+          <li class="archive__row" data-reveal>
+            <span class="archive__num">P.13</span>
+            <img class="archive__thumb" src="assets/img/gelado.jpeg" alt="" width="1374" height="708" loading="lazy" decoding="async">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://github.com/azriel90github/ItalaVirtual" target="_blank" rel="noopener">Geladaria Virtual</a></h4>
+              <p class="archive__desc">Planeado no Figma e desenvolvido com ReactJS no frontend, Node.js no backend e base de dados PostgreSQL. A aplicação permite comércio online avançado, faturamento em tempo real por parte do cliente, geração de faturas personalizadas e registo de todas as encomendas realizadas e do seu faturamento total.</p>
             </div>
-            <div class="serviços">
-                <div class="serv">
-                    <h3>DevOps Cloud</h3>
-                    <p class="content-img">
-                        <img src="assets/img/github.png" alt="github">
-                        <img src="assets/img/git.png" alt="git">
-                        <img src="assets/img/docker.png" alt="docker">
-                    </p>
-                    <!--
-                    <p class="content-preço negativo">
-
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contrato Inicial</span> <br>
-                        3 meses
-                        Por <br> apenas 50.000 kz <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 30.000 kz</span> 
-                        <span class="separador-sec">ou</span>
-                        
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contratação Permanente</span> <br>
-                        Salário
-                        Por <br> apenas 60.000 kz <br> mês <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 40.000 kz</span>
-
-                    </p>
-                    -->
-
-                    <div class="separador">
-                        
-                    </div>
-                    <div id="suporte">
-                        <h4>Suporte<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h4>
-                        <p>
-                            <!---->
-                            <span>&#x2714;</span> Contratação inicial <br>
-                            <span>&#x2714;</span> Git Intermédio <br>
-                            <span>&#x2714;</span> GitHub Intermédio <br>
-                            <span>&#x2714;</span> Docker Intermédio <br>
-                            <span>&#x2714;</span> Kubernetes Inicial <br>
-                            <span>&#x2714;</span> Ubuntu Server <br>
-                            <span>&#x2714;</span> Contratação Permanente
-                        </p>
-                    </div>
-                    <div class="separador">
-                        
-                    </div>
-                    <a href="#contacto" class="selecionar-pacote" data-pacote="DevOps Cloud">
-                        <button >Selecionar Pacote</button>
-                    </a>
-                    <div class="final-serv">
-                        Pacote exclusivo
-                        <i class='bx bxl-discord-alt bx-tada' style='color:#ffffff' ></i>
-                    </div>
-                </div>
+            <span class="tag">#framework</span>
+            <time class="archive__date" datetime="2023-11-10">10/11/2023</time>
+            <span class="archive__action" aria-hidden="true">código ↗</span>
+          </li>
+          <li class="archive__row" data-reveal>
+            <span class="archive__num">P.14</span>
+            <img class="archive__thumb" src="assets/img/planner-stack.png" alt="" width="1496" height="682" loading="lazy" decoding="async">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://planejador-js.vercel.app/" target="_blank" rel="noopener">Planejador de Tarefas Full Stack</a></h4>
+              <p class="archive__desc">Sistema web full stack desenvolvido com HTML5, CSS3 e JavaScript avançado com DayPicker, que permite ao usuário cadastrar atividades e os respetivos dias e horas.</p>
             </div>
-            <div class="serviços">
-                <div class="serv">
-                    <h3>Desktop Developer</h3>
-                    <p class="content-img">
-                        <img src="assets/img/eletron.png" alt="bitbucket">
-                        <img src="assets/img/node-js.png" alt="nodejs">
-                        <img src="assets/img/postgre.png" alt="postgres">
-                    </p>
-                    <!--
-                    <p class="content-preço">
-
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contrato Inicial</span> <br>
-                        3 meses
-                        Por <br> apenas 99.000 kz <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 50.000 kz</span> 
-                        <span class="separador-sec">ou</span>
-                        
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contratação Permanente</span> <br>
-                        Salário
-                        Por <br> apenas 102.000 kz <br> mês <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 40.000 kz</span>
-
-                    </p>
-                    -->
-                    
-                    <div class="separador">
-                        
-                    </div>
-                    <div id="suporte">
-                        <h4>Suporte<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h4>
-                        <p>
-                            <!---->
-                            <span>&#x2714;</span> Contratação inicial <br>
-                            <span>&#x2714;</span> Suporte Eletron <br>
-                            <span>&#x2714;</span> Suporte JavaScript/React <br>
-                            <span>&#x2714;</span> Suporte PostgresSQL <br>
-                            <span>&#x2714;</span> Suporte Docker <br>
-                            <span>&#x2714;</span> Suporte nodejs <br>
-                            <span>&#x2714;</span> Contratação Permanente
-                        </p>
-                    </div>
-                    <div class="separador">
-                        
-                    </div>
-                    <a href="#contacto" class="selecionar-pacote" data-pacote="Desktop Developer">
-                        <button type="button">Selecionar Pacote</button>
-                    </a>
-                    <div class="final-serv">
-                        Pacote exclusivo
-                        <i class='bx bxl-discord-alt bx-tada' style='color:#ffffff' ></i>
-                    </div>
-                </div>
+            <span class="tag">#nativo</span>
+            <time class="archive__date" datetime="2023-11-10">10/11/2023</time>
+            <span class="archive__action" aria-hidden="true">abrir ↗</span>
+          </li>
+          <li class="archive__row" data-reveal>
+            <span class="archive__num">P.15</span>
+            <img class="archive__thumb" src="assets/img/fundo-sala.png" alt="" width="1037" height="608" loading="lazy" decoding="async">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://github.com/azriel90github/SalaVirtual-Go" target="_blank" rel="noopener">Sala Virtual Full Stack</a></h4>
+              <p class="archive__desc">Aplicação web full stack desenvolvida com ReactJS e Golang, que permite aos usuários criar salas virtuais e adicionar perguntas relevantes para a comunidade, com recursos de partilha e WebSockets.</p>
             </div>
-            <div class="serviços">
-                <div class="serv">
-                    <h3>Mobile Developer</h3>
-                    <p class="content-img">
-                        <img src="assets/img/atom.png" alt="bitbucket">
-                        <img src="assets/img/app-store.png" alt="git">
-                        <img src="assets/img/android.png" alt="githulab">
-                    </p>
-                    <!--
-                    <p class="content-preço">
-
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contrato Inicial</span> <br>
-                        3 meses
-                        Por <br> apenas 120.000 kz <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 50.000 kz</span> 
-                        <span class="separador-sec">ou</span>
-                        
-                        <span style="color:#17CAF6; font-weight: 700; font-size: 1.3rem;">Contratação Permanente</span> <br>
-                        Salário
-                        Por <br> apenas 130.000 kz <br> mês <br>
-                        <span style="color:#17CAF6; font-size: 1.3rem;">$economia de 40.000 kz</span>
-
-                    </p>
-                    -->
-
-                    <div class="separador">
-                        
-                    </div>
-                    <div id="suporte">
-                        <h4>Suporte<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: #3CEA30;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg></h4>
-                        <p>
-                                
-                            <span>&#x2714;</span> Contratação inicial <br>
-                            <span>&#x2714;</span> Suporte React Native <br>
-                            <span>&#x2714;</span> Suporte Node JS <br>
-                            <span>&#x2714;</span> Suporte ExpoGo <br>
-                            <span>&#x2714;</span> Suporte Docker <br>
-                            <span>&#x2714;</span> Suporte Postgres <br>
-                            <span>&#x2714;</span> Contratação Permanente
-                        </p>
-                    </div>
-                    <div class="separador">
-                        
-                    </div>
-                    <a href="#contacto" class="selecionar-pacote" data-pacote="Mobile Developer">
-                        <button>Selecionar Pacote</button>
-                    </a>
-                    <div class="final-serv">
-                        Pacote exclusivo
-                        <i class='bx bxl-discord-alt bx-tada' style='color:#ffffff' ></i>
-                    </div>
-                </div>
+            <span class="tag">#framework</span>
+            <time class="archive__date" datetime="2023-11-10">10/11/2023</time>
+            <span class="archive__action" aria-hidden="true">código ↗</span>
+          </li>
+          <li class="archive__row" data-reveal>
+            <span class="archive__num">P.16</span>
+            <img class="archive__thumb" src="assets/img/projecto-gelado-01.jpeg" alt="" width="1374" height="730" loading="lazy" decoding="async">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://www.figma.com/design/Edr5pQecnJIkOi6smoLw8r/Geladaria-Online?node-id=0-1&amp;p=f&amp;t=1E4Ncvxqw5I345uo-0" target="_blank" rel="noopener">Design UI - Geladaria Virtual</a></h4>
+              <p class="archive__desc">UI/UX planeado no Figma: permite ao usuário fazer encomendas de qualquer lugar e a qualquer hora, de forma fácil, rápida e eficaz, aumentando as vendas e o número de clientes da geladaria.</p>
             </div>
-        </div>
-        <style>
-            /* Borda verde quando preenchido */
-            .campo-preenchido {
-                border: 1px solid hwb(120 0% 50%) !important;
-                box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-            }
-        </style>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Seleciona todos os links com a classe 'selecionar-pacote'
-                const botoesPacote = document.querySelectorAll(".selecionar-pacote");
-                const campoFormulario = document.getElementById("campoFormulario");
-        
-                botoesPacote.forEach(link => {
-                    link.addEventListener("click", function (event) {
-                        // Atualiza o campo do formulário com o nome do pacote
-                        const pacoteSelecionado = this.getAttribute("data-pacote");
-                        campoFormulario.value = pacoteSelecionado;
+            <span class="tag">#planner</span>
+            <time class="archive__date" datetime="2023-11-10">10/11/2023</time>
+            <span class="archive__action" aria-hidden="true">abrir ↗</span>
+          </li>
+          <li class="archive__row" data-reveal>
+            <span class="archive__num">P.17</span>
+            <img class="archive__thumb" src="assets/img/fundoMetas.png" alt="" width="1599" height="899" loading="lazy" decoding="async">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://www.figma.com/design/TQJ4SFFHfwfaJtVFXpsGHN/Freelancer-Platforms?t=1E4Ncvxqw5I345uo-0" target="_blank" rel="noopener">Design UI - Plataforma Freelancer</a></h4>
+              <p class="archive__desc">Desenvolvido primordialmente com React Native, Node.js, TypeScript e Figma.</p>
+            </div>
+            <span class="tag">#planner</span>
+            <time class="archive__date" datetime="2023-11-10">10/11/2023</time>
+            <span class="archive__action" aria-hidden="true">abrir ↗</span>
+          </li>
+          <li class="archive__row archive__row--next" data-reveal>
+            <span class="archive__num">P.18</span>
+            <img class="mark mark--next mark--iso" src="assets/img/isotipo-branco-web.png" alt="" width="600" height="671" loading="lazy">
+            <div class="archive__main">
+              <h4 class="archive__title"><a class="archive__link" href="https://github.com/azriel90github" target="_blank" rel="noopener">próximos-projetos/</a></h4>
+              <p class="archive__desc">Novos trabalhos estão a ser desenvolvidos. Acompanhe o código e as atualizações no GitHub.</p>
+            </div>
+            <span class="tag">#em-curso</span>
+            <span class="archive__date">—</span>
+            <span class="archive__action" aria-hidden="true">ver github ↗</span>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-                        // Adiciona a classe para borda verde
-                        campoFormulario.classList.add("campo-preenchido");
-        
-                        // Pegamos o elemento de destino (#contacto)
-                        const destino = document.querySelector(this.getAttribute("href"));
-        
-                        if (destino) {
-                            event.preventDefault(); // Evita a rolagem instantânea
-                            destino.scrollIntoView({ behavior: "smooth" }); // Rola suavemente até o destino
-                        }
-                    });
-                });
-            });
-        </script>
-        
-        <div class="contacto" id="contacto">
-            <img src="assets/svg/react.svg" class="react-cont" alt="">
-            <h2>Contratação Rápida</h2>
-            <form id="contact-form" method="post">
-                <div class="dados-pessoais">
-                    <h5>Dados Pessoais</h5>
-                    <label for="name">Nome:</label>
-                    <input id="name" type="text" name="name" placeholder="Nome Completo" autocomplete="off">
-                    <div class="error-message">
-
-                    </div> 
-
-                    <label for="number">Telefone:</label>
-                    <input id="number" type="number" name="number" placeholder="+244 (número)" autocomplete="off">
-                    <div class="error-message">
-                        
-                    </div> 
-
-                    <label for="number">Email:</label>
-                    <input id="email" type="email" name="email"placeholder="Email" autocomplete="off">
-                    <div class="error-message">
-                        
-                    </div> 
-                </div>
-                <div class="dados-empresa">
-                    <h5>Dados da Empresa</h5>
-                    <label for="empresa">Empresa:</label>
-                    <input type="text" name="empresa" id="empresa" placeholder="Empresa (Nome)">
-                    <div class="error-message">
-                        
-                    </div> 
-
-                    <label for="empresaGPS">Localização da Empresa</label>
-                    <input type="text" name="empresaGPS" id="empresaGPS" placeholder="GPS Empresa (Opcional)">
-                    <div class="error-message">
-                        
-                    </div> 
-
-                    <label for="servico">Pacote Contrato:</label>
-                    <input class="input-pacote" type="text" name="servico" id="campoFormulario" placeholder="Selecionar (Pacote)" readonly>
-                    <div class="error-message">
-                        
-                    </div> 
-                </div>
-                <button class="btn" type="reset">Limpar</button>
-                <button class="btn" type="submit">Enviar</button>
-            </form>
-        </div>
-        <div id="modalServicos" class="modal hidden">
-        <div class="modal-content">
-            <span class="close-button" id="fecharModal"></span>
-            <ul id="listaServicos">
-            <h1>Selecionar pacote</h1>
-            <li><p>Design UI/UX</p>  <span>1</span></li>
-            <li><p>Frontend Developer</p> <span>2</span></li>
-            <li><p>Backend Developer</p>  <span>3</span></li>
-            <li><p>DevOps Cloud</p> <span>4</span></li>
-            <li><p>Desktop Developer</p>  <span>5</span></li>
-            <li><p>Mobile Developer</p> <span>6</span></li>
+    <!-- 04 // serviços -->
+    <section class="section" id="serviços" aria-labelledby="servicos-title">
+      <header class="section-head" data-reveal>
+        <p class="section-head__index"><svg class="marker" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="on" cx="3" cy="3" r="1.6"/><circle class="on" cx="9" cy="3" r="1.6"/><circle class="on" cx="15" cy="3" r="1.6"/><circle class="on" cx="3" cy="9" r="1.6"/><circle cx="9" cy="9" r="1.6"/><circle cx="15" cy="9" r="1.6"/><circle cx="3" cy="15" r="1.6"/><circle cx="9" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/></svg><span class="idx">04</span><span class="sep" aria-hidden="true">//</span><span class="name">serviços</span></p>
+        <h2 class="section-head__title" id="servicos-title">Pacotes de <span class="hl">serviços</span></h2>
+        <p class="section-head__lede">Seis pacotes de contratação. Escolha um e o formulário de contratação rápida fica preenchido.</p>
+      </header>
+      <div class="services">
+        <details class="service" open data-reveal style="--i:0">
+          <summary class="service__summary">
+            <span class="service__head">
+              <span class="service__num">S.01</span>
+              <span class="service__tag">pacote exclusivo</span>
+            </span>
+            <h3 class="service__title">Design UI/UX</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="service__body">
+            <p class="service__tools"><img src="assets/img/photoshop.png" alt="Adobe Photoshop" width="64" height="64" loading="lazy"><img src="assets/img/figma.png" alt="Figma" width="64" height="64" loading="lazy"><img src="assets/img/xd.png" alt="Adobe XD" width="64" height="64" loading="lazy"></p>
+            <!--
+            <p class="content-preço">
+              Contrato inicial — 3 meses por apenas 75.000 kz (economia de 45.000 kz)
+              ou Contratação permanente — salário por apenas 83.000 kz/mês (economia de 45.000 kz)
+            </p>
+            -->
+            <p class="service__label">suporte</p>
+            <ul class="service__list">
+              <li>Contratação inicial</li>
+              <li>Partilha do projeto</li>
+              <li>Versão mobile</li>
+              <li>Fóruns de discussão</li>
+              <li>Prototipação</li>
+              <li>Freelancer</li>
+              <li>Contratação permanente</li>
             </ul>
+            <a href="#contacto" class="selecionar-pacote" data-pacote="Design UI/UX">Selecionar pacote<span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="service" open data-reveal style="--i:1">
+          <summary class="service__summary">
+            <span class="service__head">
+              <span class="service__num">S.02</span>
+              <span class="service__tag">pacote exclusivo</span>
+            </span>
+            <h3 class="service__title">Frontend Developer</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="service__body">
+            <p class="service__tools"><img src="assets/img/react.png" alt="React" width="64" height="64" loading="lazy"><img src="assets/img/social.png" alt="CSS3" width="64" height="64" loading="lazy"><img src="assets/img/html.png" alt="HTML5" width="64" height="64" loading="lazy"></p>
+            <!--
+            <p class="content-preço">
+              Contrato inicial — 3 meses por apenas 77.000 kz (economia de 40.000 kz)
+              ou Contratação permanente — salário por apenas 80.000 kz/mês (economia de 40.000 kz)
+            </p>
+            -->
+            <p class="service__label">suporte</p>
+            <ul class="service__list">
+              <li>Contratação inicial</li>
+              <li>HTML5 e CSS3 avançado</li>
+              <li>JavaScript intermédio</li>
+              <li>ReactJS intermédio</li>
+              <li>Design responsivo</li>
+              <li>Suporte Node.js</li>
+              <li>Contratação permanente</li>
+            </ul>
+            <a href="#contacto" class="selecionar-pacote" data-pacote="Frontend Developer">Selecionar pacote<span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="service" open data-reveal style="--i:2">
+          <summary class="service__summary">
+            <span class="service__head">
+              <span class="service__num">S.03</span>
+              <span class="service__tag">pacote exclusivo</span>
+            </span>
+            <h3 class="service__title">Backend Developer</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="service__body">
+            <p class="service__tools"><img src="assets/img/node-js.png" alt="Node.js" width="64" height="64" loading="lazy"><img src="assets/img/postgre.png" alt="PostgreSQL" width="64" height="64" loading="lazy"><img src="assets/img/docker.png" alt="Docker" width="64" height="64" loading="lazy"></p>
+            <!--
+            <p class="content-preço">
+              Contrato inicial — 3 meses por apenas 80.000 kz (economia de 60.000 kz)
+              ou Contratação permanente — salário por apenas 83.000 kz/mês (economia de 70.000 kz)
+            </p>
+            -->
+            <p class="service__label">suporte</p>
+            <ul class="service__list">
+              <li>Contratação inicial</li>
+              <li>Node.js intermédio</li>
+              <li>Suporte Zod</li>
+              <li>Suporte Fastify</li>
+              <li>Suporte Postgres</li>
+              <li>Suporte Docker</li>
+              <li>Contratação permanente</li>
+            </ul>
+            <a href="#contacto" class="selecionar-pacote" data-pacote="Backend Developer">Selecionar pacote<span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="service" open data-reveal style="--i:0">
+          <summary class="service__summary">
+            <span class="service__head">
+              <span class="service__num">S.04</span>
+              <span class="service__tag">pacote exclusivo</span>
+            </span>
+            <h3 class="service__title">DevOps Cloud</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="service__body">
+            <p class="service__tools"><img src="assets/img/github.png" alt="GitHub" width="64" height="64" loading="lazy"><img src="assets/img/git.png" alt="Git" width="64" height="64" loading="lazy"><img src="assets/img/docker.png" alt="Docker" width="64" height="64" loading="lazy"></p>
+            <!--
+            <p class="content-preço">
+              Contrato inicial — 3 meses por apenas 50.000 kz (economia de 30.000 kz)
+              ou Contratação permanente — salário por apenas 60.000 kz/mês (economia de 40.000 kz)
+            </p>
+            -->
+            <p class="service__label">suporte</p>
+            <ul class="service__list">
+              <li>Contratação inicial</li>
+              <li>Git intermédio</li>
+              <li>GitHub intermédio</li>
+              <li>Docker intermédio</li>
+              <li>Kubernetes inicial</li>
+              <li>Ubuntu Server</li>
+              <li>Contratação permanente</li>
+            </ul>
+            <a href="#contacto" class="selecionar-pacote" data-pacote="DevOps Cloud">Selecionar pacote<span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="service" open data-reveal style="--i:1">
+          <summary class="service__summary">
+            <span class="service__head">
+              <span class="service__num">S.05</span>
+              <span class="service__tag">pacote exclusivo</span>
+            </span>
+            <h3 class="service__title">Desktop Developer</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="service__body">
+            <p class="service__tools"><img src="assets/img/eletron.png" alt="Electron" width="64" height="64" loading="lazy"><img src="assets/img/node-js.png" alt="Node.js" width="64" height="64" loading="lazy"><img src="assets/img/postgre.png" alt="PostgreSQL" width="64" height="64" loading="lazy"></p>
+            <!--
+            <p class="content-preço">
+              Contrato inicial — 3 meses por apenas 99.000 kz (economia de 50.000 kz)
+              ou Contratação permanente — salário por apenas 102.000 kz/mês (economia de 40.000 kz)
+            </p>
+            -->
+            <p class="service__label">suporte</p>
+            <ul class="service__list">
+              <li>Contratação inicial</li>
+              <li>Suporte Electron</li>
+              <li>Suporte JavaScript/React</li>
+              <li>Suporte PostgreSQL</li>
+              <li>Suporte Docker</li>
+              <li>Suporte Node.js</li>
+              <li>Contratação permanente</li>
+            </ul>
+            <a href="#contacto" class="selecionar-pacote" data-pacote="Desktop Developer">Selecionar pacote<span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+        <details class="service" open data-reveal style="--i:2">
+          <summary class="service__summary">
+            <span class="service__head">
+              <span class="service__num">S.06</span>
+              <span class="service__tag">pacote exclusivo</span>
+            </span>
+            <h3 class="service__title">Mobile Developer</h3>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="service__body">
+            <p class="service__tools"><img src="assets/img/atom.png" alt="React Native" width="64" height="64" loading="lazy"><img src="assets/img/app-store.png" alt="App Store" width="64" height="64" loading="lazy"><img src="assets/img/android.png" alt="Android" width="64" height="64" loading="lazy"></p>
+            <!--
+            <p class="content-preço">
+              Contrato inicial — 3 meses por apenas 120.000 kz (economia de 50.000 kz)
+              ou Contratação permanente — salário por apenas 130.000 kz/mês (economia de 40.000 kz)
+            </p>
+            -->
+            <p class="service__label">suporte</p>
+            <ul class="service__list">
+              <li>Contratação inicial</li>
+              <li>Suporte React Native</li>
+              <li>Suporte Node.js</li>
+              <li>Suporte Expo Go</li>
+              <li>Suporte Docker</li>
+              <li>Suporte Postgres</li>
+              <li>Contratação permanente</li>
+            </ul>
+            <a href="#contacto" class="selecionar-pacote" data-pacote="Mobile Developer">Selecionar pacote<span aria-hidden="true">→</span></a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 05 // certificações -->
+    <section class="section" id="certificacoes" aria-labelledby="cert-title">
+      <header class="section-head" data-reveal>
+        <p class="section-head__index"><svg class="marker" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="on" cx="3" cy="3" r="1.6"/><circle class="on" cx="9" cy="3" r="1.6"/><circle class="on" cx="15" cy="3" r="1.6"/><circle class="on" cx="3" cy="9" r="1.6"/><circle class="on" cx="9" cy="9" r="1.6"/><circle cx="15" cy="9" r="1.6"/><circle cx="3" cy="15" r="1.6"/><circle cx="9" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/></svg><span class="idx">05</span><span class="sep" aria-hidden="true">//</span><span class="name">certificações</span></p>
+        <h2 class="section-head__title" id="cert-title">Certificações <span class="hl">verificadas</span></h2>
+      </header>
+      <div class="certs-layout">
+        <aside class="certs-aside" data-reveal>
+          <p class="certs-aside__count"><span>08</span> certificações</p>
+          <p>Formação contínua em JavaScript, React, React Native, Node.js, Inteligência Artificial e DevOps, com certificados verificáveis emitidos pela Rocketseat.</p>
+        </aside>
+        <div class="certs">
+        <details class="cert" data-reveal open>
+          <summary class="cert__summary">
+            <span class="cert__num">C.01</span>
+            <img class="cert__thumb" src="assets/img/cert-full-stack.png" alt="" width="1007" height="712" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">Full Stack JavaScript</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/cert-full-stack.png" alt="Certificado Full Stack JavaScript emitido pela Rocketseat" width="1007" height="712" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação front-end em HTML, CSS e JavaScript: conceitos teóricos dos fundamentos da programação, criação da estrutura base com HTML, estilização com CSS, aplicação de lógica de programação com JavaScript e Day.js para lidar com datas.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>HTML5 intermédio</li><li>CSS3 intermédio</li><li>JavaScript inicial</li><li>Day.js inicial</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/4dbe0d54-b1db-4cea-abc3-42aeb08f735c" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.02</span>
+            <img class="cert__thumb" src="assets/img/jsIniciante.png" alt="" width="1008" height="711" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">JavaScript Iniciante</h3>
+            </span>
+            <time class="cert__date" datetime="2024-09-13">13/09/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/jsIniciante.png" alt="Certificado JavaScript Iniciante emitido pela Rocketseat" width="1008" height="711" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação em JavaScript e Node.js, aplicando os conceitos de variáveis, operadores, tipos de dados, estruturas de dados, controlo de fluxo, estruturas de repetição, condicionais, assincronismo e criação de prompts interativos com a biblioteca Inquirer.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>Variáveis e operadores</li><li>Estrutura e tipos de dados</li><li>Controlo de fluxo</li><li>Prompts e Inquirer</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/8117a86f-25cb-4584-8416-d3a03a49b457" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.03</span>
+            <img class="cert__thumb" src="assets/img/jsIntermedio.png" alt="" width="1006" height="712" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">JavaScript Intermédio</h3>
+            </span>
+            <time class="cert__date" datetime="2024-09-13">13/09/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/jsIntermedio.png" alt="Certificado JavaScript Intermédio emitido pela Rocketseat" width="1006" height="712" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação back-end em Node.js com API REST, TypeScript, Fastify, DrizzleORM + PostgreSQL, Docker e Zod para validação de dados. Desenvolvimento de uma aplicação front-end em ReactJS com propriedades, estados e componentes, tipagem com TypeScript, tooling com Vite, interface responsiva com TailwindCSS, consumo da API Node.js e gestão de dados assíncronos com TanStack Query.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>Propriedades</li><li>REST API</li><li>DrizzleORM e PostgreSQL</li><li>Tipagem com TypeScript</li><li>Responsividade com TailwindCSS</li><li>Validação com Zod</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/8117a86f-25cb-4584-8416-d3a03a49b457" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.04</span>
+            <img class="cert__thumb" src="assets/img/ia.png" alt="" width="1008" height="711" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">Inteligência Artificial</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/ia.png" alt="Certificado Inteligência Artificial emitido pela Rocketseat" width="1008" height="711" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação Python integrada com o modelo GPT da OpenAI, uso do framework LangChain, criação de banco vetorial com ChromaDB, criação de agentes para consumo de dados do DuckDuckGo e da Wikipédia, criação de agente supervisor, criação de imagem Docker e deploy via AWS (ECR, EC2 e Lambda).</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>ChromaDB</li><li>Banco vetorial</li><li>Agente supervisor</li><li>Framework LangChain</li><li>GPT da OpenAI</li><li>Imagem Docker</li><li>Deploy com AWS</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/c1193aff-9690-4836-9f03-4b551bb53234" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.05</span>
+            <img class="cert__thumb" src="assets/img/cert-react.png" alt="" width="1006" height="712" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">React JS</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/cert-react.png" alt="Certificado React JS emitido pela Rocketseat" width="1006" height="712" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação front-end em ReactJS: propriedades, estados e componentes, tipagem com TypeScript, tooling com Vite, interface responsiva com TailwindCSS, consumo de API Node.js e picker de calendário.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>Propriedades com ReactJS</li><li>Estados e componentes</li><li>Tipagem</li><li>Tooling</li><li>TailwindCSS</li><li>Node.js</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/9fc3dbaf-fa95-40ef-ac4f-a285057d6c97" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.06</span>
+            <img class="cert__thumb" src="assets/img/native.png" alt="" width="1009" height="710" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">React Native</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/native.png" alt="Certificado React Native emitido pela Rocketseat" width="1009" height="710" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação mobile em React Native: propriedades, estados e componentes, tipagem com TypeScript, Expo, interface com NativeWind, roteamento por ficheiros com Expo Router, consumo de API Node.js e picker de calendário.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>Tipagem com TypeScript</li><li>Expo Framework</li><li>NativeWind</li><li>Expo Router</li><li>API Node.js</li><li>Picker de calendário</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/e4b4e80f-4e12-421e-abba-b62162318cb4" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.07</span>
+            <img class="cert__thumb" src="assets/img/node.png" alt="" width="1003" height="711" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">Node.js</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/node.png" alt="Certificado Node.js emitido pela Rocketseat" width="1003" height="711" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação back-end em Node.js com API REST, TypeScript, Fastify, Prisma ORM + SQLite e Zod para validação de dados.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>API REST</li><li>Fastify</li><li>Prisma ORM</li><li>SQLite</li><li>Zod</li><li>Validação de dados</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/be4f542b-9ad0-413f-9570-89929e51aa3a" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        <!--
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.—</span>
+            <img class="cert__thumb" src="assets/img/python.png" alt="" width="1009" height="710" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">Python</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/python.png" alt="Certificado Python emitido pela Rocketseat" width="1009" height="710" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação de cadastro e gestão de viagens com Python e Flask, preparação de ambiente e boas práticas de projeto com Virtualenv, SQL, Pylint e versionamento com pre-commit, entidades, services e repositories, e testes automatizados com Pytest.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>Flask Framework</li><li>Virtualenv</li><li>Pylint e SQL</li><li>Pre-commit</li><li>Pytest</li><li>Linguagem Python</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/2a81fa28-dc92-4885-aec0-75f3cc14463f" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        -->
+        <!--
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.—</span>
+            <img class="cert__thumb" src="assets/img/cert-go.png" alt="" width="1007" height="710" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">Go</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/cert-go.png" alt="Certificado Go emitido pela Rocketseat" width="1007" height="710" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de uma aplicação back-end em Go com Go-Chi, com ferramentas modernas e boas práticas visando escalabilidade: Docker, Docker Compose, migrations, especificações OpenAPI e geração de código Go com SQLC e goapi-gen.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>Go-Chi</li><li>Docker</li><li>Docker Compose</li><li>OpenAPI</li><li>TailwindCSS</li><li>Migrations</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/4b4f6657-f08e-4fcf-b63a-001d41146dd2" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
+        -->
+        <details class="cert" data-reveal>
+          <summary class="cert__summary">
+            <span class="cert__num">C.08</span>
+            <img class="cert__thumb" src="assets/img/cert-devops.png" alt="" width="1009" height="714" loading="lazy" decoding="async">
+            <span class="cert__heading">
+              <span class="cert__kicker">rocketseat · certificação</span>
+              <h3 class="cert__title">DevOps</h3>
+            </span>
+            <time class="cert__date" datetime="2024-07-12">12/07/2024</time>
+            <span class="toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="cert__body">
+            <figure class="cert__image">
+              <img src="assets/img/cert-devops.png" alt="Certificado DevOps emitido pela Rocketseat" width="1009" height="714" loading="lazy" decoding="async">
+            </figure>
+            <div class="cert__text">
+              <p>Desenvolvimento de competências DevOps: criação e gestão de imagens e contentores Docker, múltiplos contentores com Docker Compose, orquestração de clusters com Kubernetes, automação de pipelines CI/CD com GitHub Actions, infraestrutura como código (IaC) com Terraform, GitOps com Argo CD, cloud computing, observabilidade e boas práticas de desenvolvimento.</p>
+              <h4 class="cert__label">competências aprendidas</h4>
+              <ul class="chips"><li>Docker Compose</li><li>Clusters</li><li>Kubernetes</li><li>Pipelines CI/CD</li><li>GitHub Actions e GitOps</li><li>Argo CD</li></ul>
+              <a class="text-link" href="https://app.rocketseat.com.br/certificates/53f51fbd-60a4-4539-a7c3-994d32e86f09" target="_blank" rel="noopener">verificar certificado<span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </details>
         </div>
+      </div>
+    </section>
+
+    <!-- 06 // contacto -->
+    <section class="section section--deep" id="contacto" aria-labelledby="contacto-title">
+      <div class="contact">
+        <div class="contact__intro" data-reveal>
+          <p class="section-head__index"><svg class="marker" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle class="on" cx="3" cy="3" r="1.6"/><circle class="on" cx="9" cy="3" r="1.6"/><circle class="on" cx="15" cy="3" r="1.6"/><circle class="on" cx="3" cy="9" r="1.6"/><circle class="on" cx="9" cy="9" r="1.6"/><circle class="on" cx="15" cy="9" r="1.6"/><circle cx="3" cy="15" r="1.6"/><circle cx="9" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/></svg><span class="idx">06</span><span class="sep" aria-hidden="true">//</span><span class="name">contacto</span></p>
+          <p class="eyebrow">contratação rápida</p>
+          <h2 class="contact__title" id="contacto-title">Vamos construir algo com <span class="hl">propósito</span>.</h2>
+          <p class="contact__lede">Deixe os seus dados e selecione um pacote. A mensagem chega diretamente ao meu email.</p>
+          <ul class="contact__direct">
+            <li><span>whatsapp</span><a href="https://wa.me/244932101903" target="_blank" rel="noopener">+244 932 101 903<span class="arrow" aria-hidden="true">↗</span></a></li>
+            <li><span>email</span><a href="mailto:azrielsuelioarmando@gmail.com">azrielsuelioarmando@gmail.com</a></li>
+          </ul>
         </div>
 
-        <footer>
-            <div class="content-number">   
-                <h3>Contactos</h3>
-                <p>Telefone 1 - 932101903 <br> Telefone 2 - 958181809</p> 
-                <h3>Email</h3>  
-                <p>azrielgithub@gmail.com <br>azrielsuelioarmando@gmail.com <br>azrielarmando2024@gmail.com <br>azrielmoreira@gmail.com</p>      
-                <h3>Endereço</h3>
-                <p>Samba, Estrada Direita da Samba <br> Trirumo Luanda, Angola</p>
+        <form id="contact-form" class="form" method="post" novalidate data-reveal>
+          <p class="form__bar"><span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span><span>contratacao.form</span></p>
+          <fieldset class="form__group">
+            <legend>dados pessoais</legend>
+            <div class="field">
+              <label for="name">nome</label>
+              <input id="name" type="text" name="name" placeholder="Nome completo" autocomplete="name">
+              <div class="error-message"></div>
             </div>
-            <div class="pages">
-                <menu>
-                    <h3>Portal Dev</h3>
-                    <a href="https://www.radix-ui.com/" target="_blank"><i class='bx bx-link-alt' ></i>Radix UI</a>
-                    <a href="https://vite.dev/" target="_blank"><i class='bx bx-link-alt' ></i>Vite Dev</a>
-                    <a href="https://openai.com/" target="_blank"><i class='bx bx-link-alt' ></i>OpenAI</a>
-                    <a href="https://react.dev/" target="_blank"><i class='bx bx-link-alt' ></i>React Dev</a>
-                    <a href="https://roadmap.sh/" target="_blank"><i class='bx bx-link-alt' ></i>Roadmap.sh</a>
-                    <a href="https://www.w3schools.com/" target="_blank"><i class='bx bx-link-alt' ></i>W3C Schools</a>
-                    <a href="https://gemini.google.com/app" target="_blank"><i class='bx bx-link-alt' ></i>Gemeni AI</a>
-                    <a href="https://www.youtube.com/watch?v=M5QY2_8704o&t=532s" target="_blank"><i class='bx bx-link-alt' ></i>Music - Code</a>
-                    <a href="https://github.com/free-educa/free-livros" target="_blank"><i class='bx bx-link-alt' ></i>Livros Tech</a>
-                    <a href="https://app.rocketseat.com.br/" target="_blank"><i class='bx bx-link-alt' ></i>Rocketseat</a>
-                </menu>
+            <div class="field">
+              <label for="number">telefone</label>
+              <input id="number" type="tel" name="number" inputmode="numeric" placeholder="9 dígitos, ex.: 932101903" autocomplete="tel-national">
+              <div class="error-message"></div>
             </div>
-            <div class="social">
-                <h3>Social</h3>
-                <a href="https://www.instagram.com/_azriel90_/?hl=en" rel="external" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <!--<a href="#"><i class='bx bxl-discord-alt'></i></a>-->
-                <a href="https://www.linkedin.com/in/azriel-armando-su%C3%A9lio-14a058260/" rel="external" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://github.com/azriel90github" rel="external" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.youtube.com/channel/UCOInYR7X_3GHUuEoJ3utspg" rel="external" target="_blank"><i class='bx bxl-youtube' ></i></i></a><br>
-                <a href="https://wa.me/244932101903" rel="external" target="_blank"><button style="margin-bottom: 25px;">WhatsApp</button></a><br>
+            <div class="field field--wide">
+              <label for="email">email</label>
+              <input id="email" type="email" name="email" placeholder="nome@empresa.com" autocomplete="email">
+              <div class="error-message"></div>
             </div>
-        </footer>
-        <div class="final">
-            © Copyright2024. Todos os Direitos Reservados por Azriel Armando
-        </div>
-        <div id="toast-container">
+          </fieldset>
+          <fieldset class="form__group">
+            <legend>dados da empresa</legend>
+            <div class="field">
+              <label for="empresa">empresa</label>
+              <input type="text" name="empresa" id="empresa" placeholder="Nome da empresa" autocomplete="organization">
+              <div class="error-message"></div>
+            </div>
+            <div class="field">
+              <label for="empresaGPS">localização da empresa</label>
+              <input type="text" name="empresaGPS" id="empresaGPS" placeholder="Morada ou GPS" autocomplete="street-address">
+              <div class="error-message"></div>
+            </div>
+            <div class="field field--wide">
+              <label for="campoFormulario">pacote de contrato</label>
+              <input class="input-pacote" type="text" name="servico" id="campoFormulario" placeholder="Selecionar pacote ▾" readonly aria-haspopup="dialog">
+              <div class="error-message"></div>
+            </div>
+          </fieldset>
+          <div class="form__actions">
+            <button class="btn btn--ghost" type="reset">Limpar</button>
+            <button class="btn btn--primary" type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 
-        </div>
-        <div id="loader-overlay">
+  <!-- Modal de seleção de pacote -->
+  <div id="modalServicos" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal__head">
+        <p class="eyebrow"><span class="prompt__sign">&gt;</span> contratação rápida</p>
+        <h2 class="modal__title" id="modal-title">Selecionar pacote</h2>
+        <button type="button" class="close-button" id="fecharModal" aria-label="Fechar">×</button>
+      </div>
+      <ul id="listaServicos">
+        <li tabindex="0" role="button"><span>01</span><p>Design UI/UX</p></li>
+        <li tabindex="0" role="button"><span>02</span><p>Frontend Developer</p></li>
+        <li tabindex="0" role="button"><span>03</span><p>Backend Developer</p></li>
+        <li tabindex="0" role="button"><span>04</span><p>DevOps Cloud</p></li>
+        <li tabindex="0" role="button"><span>05</span><p>Desktop Developer</p></li>
+        <li tabindex="0" role="button"><span>06</span><p>Mobile Developer</p></li>
+      </ul>
+      <p class="modal__hint"><kbd>↵</kbd> selecionar <kbd>esc</kbd> fechar</p>
+    </div>
+  </div>
 
-        </div>
-    </body>
-    <script src="assets/js/email.js"></script>
-    <script src="assets/js/scrip.js"></script>
-    <script src="assets/js/scroller.js"></script>
-    <script src="assets/js/modal-service.js"></script>
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__name"><img class="footer__logo" src="assets/img/logotipo-texto-branco-web.png" alt="suelio.dev" width="1000" height="72" loading="lazy"></p>
+        <p class="footer__sign">Desenhado e codificado em Luanda.</p>
+      </div>
+      <div class="footer__col">
+        <h3>contactos</h3>
+        <ul>
+          <li><a href="tel:+244932101903">+244 932 101 903</a></li>
+          <li><a href="tel:+244958181809">+244 958 181 809</a></li>
+        </ul>
+        <h3>email</h3>
+        <ul>
+          <li><a href="mailto:azrielgithub@gmail.com">azrielgithub@gmail.com</a></li>
+          <li><a href="mailto:azrielsuelioarmando@gmail.com">azrielsuelioarmando@gmail.com</a></li>
+          <li><a href="mailto:azrielarmando2024@gmail.com">azrielarmando2024@gmail.com</a></li>
+          <li><a href="mailto:azrielmoreira@gmail.com">azrielmoreira@gmail.com</a></li>
+        </ul>
+        <h3>endereço</h3>
+        <address>Samba, Estrada Direita da Samba<br>Trirumo, Luanda, Angola</address>
+      </div>
+      <div class="footer__col">
+        <h3>portal dev</h3>
+        <ul>
+            <li><a href="https://www.radix-ui.com/" target="_blank" rel="noopener">Radix UI</a></li>
+            <li><a href="https://vite.dev/" target="_blank" rel="noopener">Vite Dev</a></li>
+            <li><a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a></li>
+            <li><a href="https://react.dev/" target="_blank" rel="noopener">React Dev</a></li>
+            <li><a href="https://roadmap.sh/" target="_blank" rel="noopener">Roadmap.sh</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+            <li><a href="https://gemini.google.com/app" target="_blank" rel="noopener">Gemini AI</a></li>
+            <li><a href="https://www.youtube.com/watch?v=M5QY2_8704o&amp;t=532s" target="_blank" rel="noopener">Music — Code</a></li>
+            <li><a href="https://github.com/free-educa/free-livros" target="_blank" rel="noopener">Livros Tech</a></li>
+            <li><a href="https://app.rocketseat.com.br/" target="_blank" rel="noopener">Rocketseat</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>social</h3>
+        <ul class="footer__social">
+            <li><a href="https://www.instagram.com/_azriel90_/?hl=en" target="_blank" rel="noopener">Instagram<span class="arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.linkedin.com/in/azriel-armando-su%C3%A9lio-14a058260/" target="_blank" rel="noopener">LinkedIn<span class="arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/azriel90github" target="_blank" rel="noopener">GitHub<span class="arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.youtube.com/channel/UCOInYR7X_3GHUuEoJ3utspg" target="_blank" rel="noopener">YouTube<span class="arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://wa.me/244932101903" target="_blank" rel="noopener">WhatsApp<span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom statusbar">
+      <p><span class="ok">✓</span> main</p>
+      <p>© 2024–2026 Azriel Armando. Todos os direitos reservados.</p>
+      <p class="footer__clock">luanda <span data-clock>--:--</span> · UTF-8</p>
+      <a href="#home" class="text-link">voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <div id="toast-container" role="status" aria-live="polite"></div>
+  <div id="loader-overlay"></div>
+
+  <script src="assets/js/email.js"></script>
+  <script src="assets/js/scrip.js"></script>
+  <script src="assets/js/scroller.js"></script>
+  <script src="assets/js/modal-service.js"></script>
+</body>
 </html>
